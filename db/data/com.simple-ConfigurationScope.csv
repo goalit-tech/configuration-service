@@ -1,0 +1,3 @@
+ID,CompanyCode,PurchasingOrg,Plant,IsActive,createdAt,createdBy,modifiedAt,modifiedBy
+e1a2b3c4-0001-4000-a001-000000000001,3014,C501,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+e1a2b3c4-0002-4000-a001-000000000002,3008,SW38,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin

@@ -1,0 +1,12 @@
+ID,ConfigurationScope_ID,PurchasingOrg,CompanyCode,BusinessPurpose,Plant,MaterialGroup,ProcessType,AccountAssignmentCategory,SpecialLogic,SATApproverAmount_lowAmount,SATApproverAmount_highAmount,Step,Sequence,NotificationGroup,NotificationValue,NotificationCurrency,IsActive,createdAt,createdBy,modifiedAt,modifiedBy
+a1b1c1d1-0001-4000-b001-000000000001,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,,,,,,Requester,1,REQ,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0001-4000-b001-000000000002,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,Freetext,,,15000.00,999999999.00,Procurement Expert,2,SCM,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0001-4000-b001-000000000003,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,,,,,,Procurement Verification,3,C501_Purchaser,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0001-4000-b001-000000000004,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,,,NoVendor,,,Procurement Verification,3,C501_Purchaser,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0001-4000-b001-000000000005,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,,,EventError,,,Support,,SUCZ_Support,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0002-4000-b001-000000000001,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,,,,,,Requester,1,REQ,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0002-4000-b001-000000000002,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,Freetext,,,15000.00,999999999.00,Procurement Expert,2,SW38_Notification_ProcMgmt1,250000,EUR,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0002-4000-b001-000000000003,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,Freetext,,,15000.00,999999999.00,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0002-4000-b001-000000000004,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0002-4000-b001-000000000005,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+a1b1c1d1-0002-4000-b001-000000000006,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,,,EventError,,,Support,,SW38_Support,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
