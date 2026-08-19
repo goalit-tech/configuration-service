@@ -11,6 +11,7 @@
   },
   "scripts": {
     "start": "cds-serve",
+    "watch": "cds watch",
     "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,

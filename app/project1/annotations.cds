@@ -1,6 +1,12 @@
 using ConfigService as service from '../../srv/configService';
 
 annotate service.ConfigurationScope with @(
+    UI.HeaderInfo: {
+        TypeName: 'Configuration Scope',
+        TypeNamePlural: 'Configuration Scopes',
+        Title: {$Type : 'UI.DataField', Label: 'Company Code', Value: CompanyCode },
+        Description: {$Type : 'UI.DataField', Label: 'Purchasing Org', Value: PurchasingOrg },
+    },
     UI.FieldGroup #ConfigurationHeader: {
         $Type: 'UI.FieldGroupType',
         Data : [
@@ -91,6 +97,21 @@ annotate service.Identifier with @(UI.LineItem #Identifiers: [
         $Type: 'UI.DataField',
         Label: 'IsActive',
         Value: IsActive,
+    },
+    {
+        $Type : 'UI.DataField',
+        Value : ConfigurationScope.CompanyCode,
+        Label : 'Company Code',
+    },
+    {
+        $Type : 'UI.DataField',
+        Value : ConfigurationScope.PurchasingOrg,
+        Label : 'Purchasing Org',
+    },
+    {
+        $Type : 'UI.DataField',
+        Value : ConfigurationScope.Plant,
+        Label : 'Plant',
     },
 ]);
 

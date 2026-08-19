@@ -103,7 +103,7 @@
         {
           "pattern": "ConfigurationScope({key})/ApprovalStep({key2}):?query:",
           "name": "ApprovalStepObjectPage",
-          "target": ["ConfigurationScopeList","ConfigurationScopeObjectPage", "ApprovalStepObjectPage"]
+          "target": ["ConfigurationScopeObjectPage", "ApprovalStepObjectPage"]
         }
       ],
       "targets": {
@@ -152,6 +152,21 @@
                     "route": "ApprovalStepObjectPage"
                   }
                 }
+              },
+              "controlConfiguration": {
+                "Identifiers/@com.sap.vocabularies.UI.v1.LineItem#Identifiers": {
+                  "columns": {
+                    "DataField::ConfigurationScope::CompanyCode": {
+                      "availability": "Hidden"
+                    },
+                    "DataField::ConfigurationScope::PurchasingOrg": {
+                      "availability": "Hidden"
+                    },
+                    "DataField::ConfigurationScope::Plant": {
+                      "availability": "Hidden"
+                    }
+                  }
+                }
               }
             }
           },
@@ -168,7 +183,7 @@
               "contextPath": "/ApprovalStep"
             }
           },
-          "controlAggregation": "endColumnPages",
+          "controlAggregation": "midColumnPages",
           "contextPattern": "/ConfigurationScope({key})/ApprovalStep({key2})"
         }
       }

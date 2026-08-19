@@ -8,5 +8,6 @@ service ConfigService {
     entity ApprovalStep as projection on db.ApprovalStep;
     // @odata.draft.enabled
     entity ApproverGroupMember as projection on db.ApproverGroupMember;
+    
    
 }
