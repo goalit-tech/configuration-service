@@ -93,17 +93,25 @@
         {
           "pattern": ":?query:",
           "name": "ConfigurationScopeList",
-          "target": ["ConfigurationScopeList"]
+          "target": [
+            "ConfigurationScopeList"
+          ]
         },
         {
           "pattern": "ConfigurationScope({key}):?query:",
           "name": "ConfigurationScopeObjectPage",
-          "target": ["ConfigurationScopeList", "ConfigurationScopeObjectPage"]
+          "target": [
+            "ConfigurationScopeList",
+            "ConfigurationScopeObjectPage"
+          ]
         },
         {
           "pattern": "ConfigurationScope({key})/ApprovalStep({key2}):?query:",
           "name": "ApprovalStepObjectPage",
-          "target": ["ConfigurationScopeObjectPage", "ApprovalStepObjectPage"]
+          "target": [
+            "ConfigurationScopeObjectPage",
+            "ApprovalStepObjectPage"
+          ]
         }
       ],
       "targets": {
@@ -128,7 +136,34 @@
                     "type": "ResponsiveTable",
                     "selectAll": false,
                     "selectionLimit": 1,
-                    "selectionMode": "Single"
+                    "selectionMode": "Single",
+                    "enableExport": false
+                  },
+                  "actions": {
+                    "ExportActionApproversteps": {
+                      "press": "project1.ext.ListReportExtController.onDownloadApprovalSteps",
+                      "enabled": true,
+                      "requiresSelection": false,
+                      "text": "As Approvers"
+                    },
+                    "ExportActionIdentifiers": {
+                      "press": "project1.ext.ListReportExtController.onDownloadIdentifiers",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "As Identifiers"
+                    },
+                    "Export": {
+                      "text": "Export",
+                      "icon": "sap-icon://excel-attachment",
+                      "menu": [
+                        "ExportActionApproversteps",
+                        "ExportActionIdentifiers"
+                      ],
+                      "position": {
+                        "placement": "After",
+                        "anchor": "StandardAction::Delete"
+                      }
+                    }
                   }
                 }
               },
