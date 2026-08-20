@@ -8,6 +8,7 @@ sap.ui.define(["sap/ui/core/mvc/ControllerExtension", "sap/m/MessageBox"], funct
     // Internal helper – fetches the endpoint and saves the xlsx response
     // ------------------------------------------------------------------
     function _triggerDownload(url, filename) {
+        debugger
         fetch(url)
             .then(function (response) {
                 if (!response.ok) {

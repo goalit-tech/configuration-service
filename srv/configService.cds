@@ -24,10 +24,7 @@ service ConfigService {
                 IsActive
         };
 
-    /**
-     * Flat view for Excel download: ConfigurationScope + ApprovalStep +
-     * ApproverGroupMember fields denormalised (one row per approver member).
-     */
+
     @readonly
     entity ApprovalStepDownloadView  as
         select from ApproverGroupMember {
