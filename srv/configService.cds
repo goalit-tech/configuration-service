@@ -11,6 +11,7 @@ service ConfigService {
 
     entity ApproverGroupMember as projection on db.ApproverGroupMember;
 
+
     entity IdentifierDownloadView    as
         select from Identifier {
             key ID,
