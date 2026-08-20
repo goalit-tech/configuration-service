@@ -1,12 +1,306 @@
 ID,ConfigurationScope_ID,PurchasingOrg,CompanyCode,BusinessPurpose,Plant,MaterialGroup,ProcessType,AccountAssignmentCategory,SpecialLogic,SATApproverAmount_lowAmount,SATApproverAmount_highAmount,Step,Sequence,NotificationGroup,NotificationValue,NotificationCurrency,IsActive,createdAt,createdBy,modifiedAt,modifiedBy
-a1b1c1d1-0001-4000-b001-000000000001,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,,,,,,Requester,1,REQ,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0001-4000-b001-000000000002,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,Freetext,,,15000.00,999999999.00,Procurement Expert,2,SCM,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0001-4000-b001-000000000003,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,,,,,,Procurement Verification,3,C501_Purchaser,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0001-4000-b001-000000000004,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,,,NoVendor,,,Procurement Verification,3,C501_Purchaser,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0001-4000-b001-000000000005,e1a2b3c4-0001-4000-a001-000000000001,C501,3014,IND,,,,,EventError,,,Support,,SUCZ_Support,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0002-4000-b001-000000000001,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,,,,,,Requester,1,REQ,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0002-4000-b001-000000000002,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,Freetext,,,15000.00,999999999.00,Procurement Expert,2,SW38_Notification_ProcMgmt1,250000,EUR,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0002-4000-b001-000000000003,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,Freetext,,,15000.00,999999999.00,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0002-4000-b001-000000000004,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0002-4000-b001-000000000005,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
-a1b1c1d1-0002-4000-b001-000000000006,e1a2b3c4-0002-4000-a001-000000000002,SW38,3008,,,,,,EventError,,,Support,,SW38_Support,,,true,2026-08-10T09:00:00Z,admin,2026-08-10T09:00:00Z,admin
+deeac058-c4a5-4e80-8c77-236d0b0b6864,4fd17109-cf1b-4ee1-8033-4c0866a9eb79,0003,3012,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b4c4fc2d-6a21-4eb9-b554-4e8f4706fb91,4fd17109-cf1b-4ee1-8033-4c0866a9eb79,0003,3012,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5f89758a-493a-4e48-90da-963c3ee5e75a,4fd17109-cf1b-4ee1-8033-4c0866a9eb79,0003,3012,,,,,,,,,Procurement Verification,3,0003_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+197e993c-586d-43fd-9c06-5102c273ecd4,4fd17109-cf1b-4ee1-8033-4c0866a9eb79,0003,3012,,,,,,NoVendor,,,Procurement Verification,3,0003_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+10863079-de52-431b-be5f-eed3cf76e58b,4fd17109-cf1b-4ee1-8033-4c0866a9eb79,0003,3012,,,,,,EventError,,,Support,,SUCZ_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+9428d648-599f-4387-a621-4e6ad250b7bf,a53366df-7303-42a4-b2c5-18c3e5bb5ced,A200,5026,IND,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e051fa43-d442-4b3d-ada7-f954846ba119,a53366df-7303-42a4-b2c5-18c3e5bb5ced,A200,5026,IND,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+240d61b8-b473-4aac-89d4-1b551d0316ac,a53366df-7303-42a4-b2c5-18c3e5bb5ced,A200,5026,IND,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ffe53737-063b-4ee9-a04c-1b537975e548,a53366df-7303-42a4-b2c5-18c3e5bb5ced,A200,5026,IND,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2588ad96-38ac-4d7b-ac07-91842bf00ab7,a53366df-7303-42a4-b2c5-18c3e5bb5ced,A200,5026,IND,,,,,EventError,,,Support,,A200_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6d3e0843-608c-4e6f-982f-6b14e20ed061,e54947af-32ac-4d6c-a3d7-3701810754e0,AG00,581C,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6fba3db1-9adc-42a7-8048-9237e6977ddb,e54947af-32ac-4d6c-a3d7-3701810754e0,AG00,581C,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bf3b236d-0cd1-4313-b35f-8b2ebc8f3cbe,e54947af-32ac-4d6c-a3d7-3701810754e0,AG00,581C,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+44e4cf87-782f-4551-8d91-8d4ac7475f64,e54947af-32ac-4d6c-a3d7-3701810754e0,AG00,581C,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6f9aa3fc-324b-4420-a96f-0de5d8dd95df,e54947af-32ac-4d6c-a3d7-3701810754e0,AG00,581C,,,,,,EventError,,,Support,,AG00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+04544d49-0916-4b4f-9866-13908033bf8e,dc55a6b2-a4ff-4269-a6e1-cdac259b024a,AH00,562K,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+0fa81216-32a7-42e0-ba45-ed26895cd509,dc55a6b2-a4ff-4269-a6e1-cdac259b024a,AH00,562K,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+13a70b64-72f2-4251-bb72-d2e8d665e3f5,dc55a6b2-a4ff-4269-a6e1-cdac259b024a,AH00,562K,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d7c6b425-8324-468d-a329-916ccf1a8c60,dc55a6b2-a4ff-4269-a6e1-cdac259b024a,AH00,562K,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6155a979-333a-415e-a156-6d70cb1ee926,dc55a6b2-a4ff-4269-a6e1-cdac259b024a,AH00,562K,,,,,,EventError,,,Support,,AH00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7da5b3eb-421f-40e3-ab40-97d6c06f7d02,29a29847-4c26-4ff8-b9a9-5a9689743fe4,AI00,423B,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8ccf453d-fed4-4e70-a56f-e7275040b06d,29a29847-4c26-4ff8-b9a9-5a9689743fe4,AI00,423B,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c711ae79-6eb4-4ae4-93f4-e7fedb8ef354,29a29847-4c26-4ff8-b9a9-5a9689743fe4,AI00,423B,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7c92b262-7c1e-4749-9eb2-25c5d036566b,29a29847-4c26-4ff8-b9a9-5a9689743fe4,AI00,423B,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+067c51e1-69c3-4640-9090-f96890278258,29a29847-4c26-4ff8-b9a9-5a9689743fe4,AI00,423B,,,,,,EventError,,,Support,,AI00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a1c6f7ca-c174-4294-8b6e-c4437738104e,6bb3e85e-012f-49a6-a3ab-17f04e1867b8,AP00,5089,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+39476c45-efd1-4332-854d-04dd54d67590,6bb3e85e-012f-49a6-a3ab-17f04e1867b8,AP00,5089,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+58fdab5a-1b33-495a-9818-e4955c2be0d2,6bb3e85e-012f-49a6-a3ab-17f04e1867b8,AP00,5089,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+cbcd6f70-8aa6-4fe3-a76e-8d6cb30180f5,6bb3e85e-012f-49a6-a3ab-17f04e1867b8,AP00,5089,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2f964493-be2f-4468-84ba-c2b8a0f4ca58,6bb3e85e-012f-49a6-a3ab-17f04e1867b8,AP00,5089,,,,,,EventError,,,Support,,AP00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+00df8e84-d4c7-42de-a271-139680d820c8,e3aec825-8f6f-4339-a4c7-172d966bce31,AR00,524K,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+823afa43-68fc-4a67-ae47-fdc08c077462,e3aec825-8f6f-4339-a4c7-172d966bce31,AR00,524K,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+775b75a0-3155-49f1-a170-522b9231da3e,e3aec825-8f6f-4339-a4c7-172d966bce31,AR00,524K,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f5859295-306c-4195-9027-773a324469f5,e3aec825-8f6f-4339-a4c7-172d966bce31,AR00,524K,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+9187449e-5286-45a5-b184-cde3e3d54072,e3aec825-8f6f-4339-a4c7-172d966bce31,AR00,524K,,,,,,EventError,,,Support,,AR00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bb836af2-8717-4550-999d-b0b8ca22efc9,d5316cb1-ff04-41b9-b8ae-d225e39271dc,AT00,556P,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c629fcf5-13bd-4ba4-aed2-63d76052ca3e,d5316cb1-ff04-41b9-b8ae-d225e39271dc,AT00,556P,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f64b5217-202b-47f1-9c4a-770c1ed99822,d5316cb1-ff04-41b9-b8ae-d225e39271dc,AT00,556P,,,,,,,,,Procurement Verification,3,AT00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ad9bbb3a-e016-42c0-ab1f-7e1b90102e21,d5316cb1-ff04-41b9-b8ae-d225e39271dc,AT00,556P,,,,,,NoVendor,,,Procurement Verification,3,AT00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+32b3124b-64f9-4da7-836a-21b9ad0e6c60,d5316cb1-ff04-41b9-b8ae-d225e39271dc,AT00,556P,,,,,,EventError,,,Support,,SUIN_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6d6456bb-331e-4b0c-a07a-ce4bf311432b,ac65737f-7e41-4a59-9ea0-00d596c44c3e,B400,490C,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6bfed079-e292-4088-820d-3c4c7cf4fe5e,ac65737f-7e41-4a59-9ea0-00d596c44c3e,B400,490C,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d3bbedb4-364d-429d-9850-3ee78c3151df,ac65737f-7e41-4a59-9ea0-00d596c44c3e,B400,490C,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2ba175d2-11ae-47d6-b605-8965fa90f3c8,ac65737f-7e41-4a59-9ea0-00d596c44c3e,B400,490C,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c194991d-0535-4ac4-8301-193bf5102ef0,ac65737f-7e41-4a59-9ea0-00d596c44c3e,B400,490C,,,,,,EventError,,,Support,,B400_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+930aa892-70a6-47c7-85f2-6019cb82ff5c,2bb93da2-7acf-4dfe-8df7-7fe023172718,B600,5067,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ea6297fd-490e-4660-8406-1f55ef99a7f8,2bb93da2-7acf-4dfe-8df7-7fe023172718,B600,5067,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+da663e09-08c4-49ec-acc6-32a38c0a28ed,2bb93da2-7acf-4dfe-8df7-7fe023172718,B600,5067,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+4e56fed6-72d0-4eb7-87e9-d49b73bd5a20,2bb93da2-7acf-4dfe-8df7-7fe023172718,B600,5067,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bc74edcf-ff93-49ab-9a79-1ec402243481,2bb93da2-7acf-4dfe-8df7-7fe023172718,B600,5067,,,,,,EventError,,,Support,,B600_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c5040d85-747f-40f5-a55b-7c09ba158b1c,28199062-89c3-4ea3-b797-c6e666580b70,B700,5017,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+65652c1e-1556-4198-a388-d5bed85907c1,28199062-89c3-4ea3-b797-c6e666580b70,B700,5017,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+79999aef-d359-4c4d-93e2-678143ff5ec4,28199062-89c3-4ea3-b797-c6e666580b70,B700,5017,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+eef1f866-d48f-44f5-9503-11b10e152ba9,28199062-89c3-4ea3-b797-c6e666580b70,B700,5017,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+761de41f-b710-4e92-8564-62ae5f1bbf64,28199062-89c3-4ea3-b797-c6e666580b70,B700,5017,,,,,,EventError,,,Support,,B700_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+3853ddad-6acd-4a3e-88bd-ddf905859e27,566521a1-8541-405a-8135-953290141716,B800,5034,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e82b1047-c16f-49cb-aa65-9e4fcf42d36e,566521a1-8541-405a-8135-953290141716,B800,5034,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d8341de9-98f9-4875-8900-f929053c03be,566521a1-8541-405a-8135-953290141716,B800,5034,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a0b2e4ae-2cef-4d49-a846-3c06f8c95403,566521a1-8541-405a-8135-953290141716,B800,5034,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8507fb7a-605d-42f3-97da-17e0404df264,566521a1-8541-405a-8135-953290141716,B800,5034,,,,,,EventError,,,Support,,B800_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+732e2f3e-1671-4bf5-be90-92d133280bb7,fd6c64d7-d86c-4dc0-a930-dd2daddfb093,BA00,7018,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+34df1b36-14ae-432a-b014-0ae64af8c8e6,fd6c64d7-d86c-4dc0-a930-dd2daddfb093,BA00,7018,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+66918252-e03e-44f8-ae01-350d799f6cc1,fd6c64d7-d86c-4dc0-a930-dd2daddfb093,BA00,7018,,,,,,,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e21953a6-fd30-4185-8058-c8f08592721e,fd6c64d7-d86c-4dc0-a930-dd2daddfb093,BA00,7018,,,,,,NoVendor,,,Procurement Verification,3,INDD_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+99260bb1-2178-47d6-8941-8d5b1fecc710,fd6c64d7-d86c-4dc0-a930-dd2daddfb093,BA00,7018,,,,,,EventError,,,Support,,BA00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ea5ff6cb-a15b-4fb6-8352-f77ba5341529,602b646e-bd65-469a-a88a-ad794257b24f,BY00,7998,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c4866808-913d-4dfb-ba73-24bab58987b6,602b646e-bd65-469a-a88a-ad794257b24f,BY00,7998,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b7fda448-6f97-4aac-9c18-7595ffdec34f,602b646e-bd65-469a-a88a-ad794257b24f,BY00,7998,,,,,,,,,Procurement Verification,3,BY00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e309d134-4335-4041-b675-e4c5a1ce3be2,602b646e-bd65-469a-a88a-ad794257b24f,BY00,7998,,,,,,NoVendor,,,Procurement Verification,3,BY00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+1c49e1c9-bf19-4335-9f82-14a6881730d3,602b646e-bd65-469a-a88a-ad794257b24f,BY00,7998,,,,,,EventError,,,Support,,BY00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+505ea9c6-63c6-4b4a-9977-37aad7ab3c81,683c7737-ded2-454b-aa81-17f65a6308d4,C300,3003,DIR,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+657aa316-50af-4464-9bc4-bb63e93d1a90,683c7737-ded2-454b-aa81-17f65a6308d4,C300,3003,DIR,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7e6651ee-38bb-4fac-a866-efb7cb02d4ee,683c7737-ded2-454b-aa81-17f65a6308d4,C300,3003,DIR,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+dc5b93a5-7d50-420c-86de-194531517aee,683c7737-ded2-454b-aa81-17f65a6308d4,C300,3003,DIR,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2c95241e-e317-472d-a125-4bb8c9e547d0,683c7737-ded2-454b-aa81-17f65a6308d4,C300,3003,DIR,,,,,EventError,,,Support,,C300_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+da84a10b-b403-4d8c-9146-08d57c48afa3,683c7737-ded2-454b-aa81-17f65a6308d4,C300,3003,Error,,,,,,,,Support,,XXXX_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+71e8de58-c6fb-4ab2-aa45-f8747dd7b3d7,683c7737-ded2-454b-aa81-17f65a6308d4,C300,3003,UNKNOWN,,,,,,,,Support,,XXXX_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7a720701-cfaf-40b5-a71e-661bbb6fab29,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,IND,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8a12d35a-9b21-41bb-adee-b03478c771f2,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,IND,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+cb2e3141-1924-418f-b0d3-4a5ba56639e8,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,IND,,,,,,,,Procurement Verification,3,C501_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+853f3c08-0571-4e15-917f-8487a9de26ef,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,IND,,,,,NoVendor,,,Procurement Verification,3,C501_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+589f5d6d-5677-4150-b108-0ab2d7e1bbbf,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,IND,,,,,EventError,,,Support,,SUCZ_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+02d994aa-298f-4555-8a0b-d4485b508f54,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,DIR,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2966cdf2-746a-4de4-a324-ae7e3fb394dd,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,DIR,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6d82511b-eb2a-495e-878d-b27274b99ee6,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,DIR,,,,,,,,Procurement Verification,3,SRER_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c4be7abb-26d5-4c9c-addc-bed5ccdebcbb,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,DIR,,,,,NoVendor,,,Procurement Verification,3,SRER_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ba661cc0-648a-442d-85a2-abd77aafbda3,70cdd54c-e696-4eda-859e-86c60fa4d47b,C501,3014,DIR,,,,,EventError,,,Support,,C501_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e4e7c4a4-d21a-402e-b8ea-a514536ece66,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+74f6efb3-6bb9-46ea-bf0d-581a4c0dee07,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,,,,Freetext,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f1ab06e7-21f1-4bd4-b1db-6b95cc7ca703,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+0116a4d6-45a8-42ec-a75d-02a1e847239f,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,,,,,,EventError,,,Support,,CA00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b42ec09b-dcb9-4cc1-a971-da70ec702e26,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,,,,Freetext,,,15000,999999999,Procurement Expert,2,CA00_Notification_ProcMgmt1,250000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+0b574d67-93ea-413b-9ad4-c51ebe9a8e17,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,,,,,,,,,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8f0ff0a0-8a72-42a6-9c15-d00cadbde43d,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,DIR,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+3304870a-3a21-4324-9e9b-650179646d07,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,DIR,,,Freetext,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+83473181-c767-4ebd-b71f-f0371dec8dd4,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,DIR,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d38ee0ef-8e12-4f62-b762-0320dff3d936,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,DIR,,,,,EventError,,,Support,,CA00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8eadd1e9-8d4e-425a-911f-33afcfa9f06b,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,DIR,,,Freetext,,,50000,999999999,Procurement Expert,2,CA00_Notification_ProcMgmt1,250000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f5f18210-da93-4f76-9747-30836c5163cc,5f2cc390-68d1-4bff-977d-23360da32eec,CA00,3364,DIR,,,,,,,,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+20dac743-5903-4d7f-bb83-cf0fd5f7feca,e3d32ef5-cd4b-4244-aab0-b4e21c96d654,CE00,3371,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c634cc77-cf1f-445a-8976-78255a6dba37,e3d32ef5-cd4b-4244-aab0-b4e21c96d654,CE00,3371,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c892a13e-019b-49e3-abc4-a72df1d76160,e3d32ef5-cd4b-4244-aab0-b4e21c96d654,CE00,3371,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d089da33-389b-406c-843b-41f9ce1b3b20,e3d32ef5-cd4b-4244-aab0-b4e21c96d654,CE00,3371,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2960ea26-fb47-42e8-af46-6a26311b117f,e3d32ef5-cd4b-4244-aab0-b4e21c96d654,CE00,3371,,,,,,EventError,,,Support,,CE00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c8c0e341-9274-43de-a086-2cca96ac878c,72d2c1d8-99f7-4e0b-9f63-b4d885e1f10e,CF00,3372,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+89273afb-a266-41d1-be8f-443e0414429e,72d2c1d8-99f7-4e0b-9f63-b4d885e1f10e,CF00,3372,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+cf20c2e8-311f-4d2d-b34c-d4af245e7615,72d2c1d8-99f7-4e0b-9f63-b4d885e1f10e,CF00,3372,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b2a63c72-fb69-4dbc-9a12-2f50bec86874,72d2c1d8-99f7-4e0b-9f63-b4d885e1f10e,CF00,3372,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+00878c49-ec78-47b7-9215-d9c9a7baa9a1,72d2c1d8-99f7-4e0b-9f63-b4d885e1f10e,CF00,3372,,,,,,EventError,,,Support,,CF00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d8a0c859-daa0-47d3-a586-b6ca464d3c29,b033946d-3e89-4108-9792-e384692ca22b,CG00,3373,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a9d73658-89dc-4bb8-8c25-03817a8458c5,b033946d-3e89-4108-9792-e384692ca22b,CG00,3373,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5ffb08e3-0767-4c83-9ae3-ba96cb31bc34,b033946d-3e89-4108-9792-e384692ca22b,CG00,3373,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+fef8a012-d8d6-4dec-81d6-5e8517977253,b033946d-3e89-4108-9792-e384692ca22b,CG00,3373,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6bd46034-7bbb-42af-b892-b695cebe3ca8,b033946d-3e89-4108-9792-e384692ca22b,CG00,3373,,,,,,EventError,,,Support,,CG00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7a4fd743-7b39-4337-b624-cc4478af0169,abdcdd5f-aede-4c43-ad14-b414a652949c,CH00,3384,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+39ff8009-0d43-40e5-86b7-dddbf8c1c62a,abdcdd5f-aede-4c43-ad14-b414a652949c,CH00,3384,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+50a50907-2eb8-41f5-b689-e91a0d8a752b,abdcdd5f-aede-4c43-ad14-b414a652949c,CH00,3384,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+dec5243c-95ee-4c89-9e93-89db98d296a2,abdcdd5f-aede-4c43-ad14-b414a652949c,CH00,3384,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+896a320d-2ad8-4fb9-a383-9e49085f7b20,abdcdd5f-aede-4c43-ad14-b414a652949c,CH00,3384,,,,,,EventError,,,Support,,CH00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+71f62153-fa9a-42ad-9c9d-e3c491fc4232,34c83adb-63a1-4a6c-9aa2-6753bffe2002,CJ00,3386,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+95f95c02-ab19-443d-ad9e-f9ad2491a6bf,34c83adb-63a1-4a6c-9aa2-6753bffe2002,CJ00,3386,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7972928b-f239-4497-b6c5-8cef91d21a63,34c83adb-63a1-4a6c-9aa2-6753bffe2002,CJ00,3386,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e663bcd4-d3c8-4d40-a718-471fd2d37739,34c83adb-63a1-4a6c-9aa2-6753bffe2002,CJ00,3386,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+25a55f34-ce6c-425e-a58f-688cde3b65f5,34c83adb-63a1-4a6c-9aa2-6753bffe2002,CJ00,3386,,,,,,EventError,,,Support,,CJ00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+99049950-c49b-45fb-8583-bc0f6bf6d2f1,4398186d-4785-4982-a5d7-085f1686d1c2,CK00,3374,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+355e9d92-066a-4a97-a22b-c39c32499838,4398186d-4785-4982-a5d7-085f1686d1c2,CK00,3374,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+94ef61a3-3d1c-43c5-8589-ead30ec4728c,4398186d-4785-4982-a5d7-085f1686d1c2,CK00,3374,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+376eae78-d802-437c-aee2-09646ac47165,4398186d-4785-4982-a5d7-085f1686d1c2,CK00,3374,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5e268bc1-7670-4205-8722-5f1dfee39f34,4398186d-4785-4982-a5d7-085f1686d1c2,CK00,3374,,,,,,EventError,,,Support,,CK00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a0e14ba4-7776-44f4-b890-582dba67e3b5,c3cc90e3-17db-4630-9517-4bbd91dcf7e3,CL00,3375,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+18e53eda-44f9-4e8a-9937-c247982fe859,c3cc90e3-17db-4630-9517-4bbd91dcf7e3,CL00,3375,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+76680240-2b0e-4628-a3c7-40763ce686b2,c3cc90e3-17db-4630-9517-4bbd91dcf7e3,CL00,3375,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2010942f-c083-4f3b-b21f-f0bc685f3a59,c3cc90e3-17db-4630-9517-4bbd91dcf7e3,CL00,3375,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+45f85454-fe76-4def-adce-31e4bf0ba1fe,c3cc90e3-17db-4630-9517-4bbd91dcf7e3,CL00,3375,,,,,,EventError,,,Support,,CL00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2db799f1-76ae-40d0-9339-bd97030364f0,689dd7eb-c699-4c8c-8628-4c9a91421a8d,CM00,3376,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b0915524-5be2-4d53-b508-f2ef18ca64b7,689dd7eb-c699-4c8c-8628-4c9a91421a8d,CM00,3376,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+39f30801-d46b-472d-9a52-1b3861026205,689dd7eb-c699-4c8c-8628-4c9a91421a8d,CM00,3376,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+81e7fea0-97ce-42cc-80dd-d54a5c4bcc5d,689dd7eb-c699-4c8c-8628-4c9a91421a8d,CM00,3376,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+9d637d94-6d63-436f-808e-bd0e3443180b,689dd7eb-c699-4c8c-8628-4c9a91421a8d,CM00,3376,,,,,,EventError,,,Support,,CM00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+3ec2eb28-6cb3-4d7a-95f9-995b76a9c43d,c7737038-4aa9-4458-9c7e-c79efa4c980e,CN00,3377,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+22f80f0b-7658-495c-b120-56f1baa0cde7,c7737038-4aa9-4458-9c7e-c79efa4c980e,CN00,3377,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+009774b8-0089-4237-bb2c-303ef9197124,c7737038-4aa9-4458-9c7e-c79efa4c980e,CN00,3377,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f9891b97-5385-42a7-95fa-2d73203f1832,c7737038-4aa9-4458-9c7e-c79efa4c980e,CN00,3377,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+1ae0069a-09a0-41e3-8e86-ab121df3e889,c7737038-4aa9-4458-9c7e-c79efa4c980e,CN00,3377,,,,,,EventError,,,Support,,CN00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+9306eb70-db2b-4cfe-acbd-8f8de8d95b86,72736b61-cb71-4d83-8574-313da3d17529,CO00,3378,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7b32fbd5-e4cc-47da-bcf9-c23ac490bc76,72736b61-cb71-4d83-8574-313da3d17529,CO00,3378,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c162fbc5-7592-4230-8e9a-a087eab3ba1f,72736b61-cb71-4d83-8574-313da3d17529,CO00,3378,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5b4aac36-199c-496f-96c6-a1c372abf1e4,72736b61-cb71-4d83-8574-313da3d17529,CO00,3378,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b8ffad17-35b1-4dd3-883d-f1bd9c442ad7,72736b61-cb71-4d83-8574-313da3d17529,CO00,3378,,,,,,EventError,,,Support,,CO00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+97b5767a-8a43-4655-b5f0-2d548aaa191f,30c641d9-b4ad-4334-a68c-f6b02e4a49c0,CP00,3379,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e63bdc55-dd1f-4ac5-80a3-bf1ae7eff9d3,30c641d9-b4ad-4334-a68c-f6b02e4a49c0,CP00,3379,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+460804e8-221b-4aa7-a76a-f87af4e707a3,30c641d9-b4ad-4334-a68c-f6b02e4a49c0,CP00,3379,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a121e079-a00f-4f61-9cd0-90c7551c5fc0,30c641d9-b4ad-4334-a68c-f6b02e4a49c0,CP00,3379,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+178af3cd-67ea-4b07-a57d-8681ec679b64,30c641d9-b4ad-4334-a68c-f6b02e4a49c0,CP00,3379,,,,,,EventError,,,Support,,CP00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+fafd4e5b-79b1-46b3-88f5-486961dd74ae,a35efdb1-758f-4d68-8b12-62d11921bae4,CQ00,3380,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+88bf9b3c-b819-49ab-b256-c9638bdd2258,a35efdb1-758f-4d68-8b12-62d11921bae4,CQ00,3380,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e566bac5-93dc-4c25-8992-e87f2e8a269b,a35efdb1-758f-4d68-8b12-62d11921bae4,CQ00,3380,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5654792b-6994-4bbb-9982-82ed141c425b,a35efdb1-758f-4d68-8b12-62d11921bae4,CQ00,3380,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+0d46a945-ec54-4526-91ee-89aefe433d3b,a35efdb1-758f-4d68-8b12-62d11921bae4,CQ00,3380,,,,,,EventError,,,Support,,CQ00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+aeb41445-f6cd-4aa2-8b62-a8ce15c3cccb,50d067e2-667c-4336-8212-43d5358d894b,CR00,3381,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d993ebc8-d6ab-4ed7-a2da-a6fd62b30f73,50d067e2-667c-4336-8212-43d5358d894b,CR00,3381,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5805a0e2-8162-4ed4-b573-959a7f994369,50d067e2-667c-4336-8212-43d5358d894b,CR00,3381,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+60ba572f-c437-4793-a728-8f52f70f4ead,50d067e2-667c-4336-8212-43d5358d894b,CR00,3381,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a4fa44c9-700c-491f-8db3-55d7ed1777a0,50d067e2-667c-4336-8212-43d5358d894b,CR00,3381,,,,,,EventError,,,Support,,CR00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+4ff8117e-42b9-466d-b3e0-1ce395a9fd3c,7ad503a9-b769-45b9-978d-2f00a87470aa,CS00,3382,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+fd28f0a3-f5b1-459e-9732-6824aae4f51e,7ad503a9-b769-45b9-978d-2f00a87470aa,CS00,3382,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5282f77e-cf48-4372-80e6-354bc0729833,7ad503a9-b769-45b9-978d-2f00a87470aa,CS00,3382,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+3664489d-53af-4a20-9822-3610d2930eb7,7ad503a9-b769-45b9-978d-2f00a87470aa,CS00,3382,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+570b4739-c14c-4c67-b3b2-d74fbf22427c,7ad503a9-b769-45b9-978d-2f00a87470aa,CS00,3382,,,,,,EventError,,,Support,,CS00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6cf9d5e1-ff9a-4ec3-be6e-1449e46f456d,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+09fe5f70-403c-4175-8018-22dbb200eddd,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ac7019f8-0597-409d-ace5-921562bfdba9,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,,,,,,Procurement Verification,3,CT00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+80b2b6c2-de7f-41ae-bb06-b65e71a94e73,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,,,NoVendor,,,Procurement Verification,3,CT00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f18e65e6-8728-4e0f-9978-fcfcca13b186,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,,,EventError,,,Support,,CT00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+586ea633-0c5d-4303-8974-7db1a9b06f65,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+da4b02cb-e3f2-458b-81b2-b06895d7c524,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b0eb9138-fb31-44fe-92d8-3f1a39afbdfa,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,,,,,,Procurement Verification,3,SREI_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+34c9f294-7fdd-4f88-b8e9-84cc27e3c854,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,,,NoVendor,,,Procurement Verification,3,SREI_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d3af6e36-6b00-4fcd-82e3-4d3585c173a6,006dbebf-5c5a-42a6-acfc-127c42ed7c70,CT00,3368,,,,,,EventError,,,Support,,SUIN_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+74d2ca05-2c6a-4298-9780-a053896eec07,2ad42719-1d3b-424c-845f-0bb2ddcfc280,D200,3396,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bc3e4c9b-5de1-4d94-9555-bee3b779db8d,2ad42719-1d3b-424c-845f-0bb2ddcfc280,D200,3396,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8053a396-04e9-4d1f-ae01-5673db4a5c83,2ad42719-1d3b-424c-845f-0bb2ddcfc280,D200,3396,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d00ee401-ccee-4127-9ae3-d1e342d59694,2ad42719-1d3b-424c-845f-0bb2ddcfc280,D200,3396,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a5179d97-20ab-406b-be06-51406d55292e,2ad42719-1d3b-424c-845f-0bb2ddcfc280,D200,3396,,,,,,EventError,,,Support,,D200_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c14de514-efb9-4149-95c9-3db4716af238,2a5ed45f-55b5-4410-9f10-08913c38ae24,D300,3397,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d825d41e-df94-4105-b082-1bfbd6f682f2,2a5ed45f-55b5-4410-9f10-08913c38ae24,D300,3397,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e6d87e05-403b-4119-8f43-10d577ae8efd,2a5ed45f-55b5-4410-9f10-08913c38ae24,D300,3397,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+af900bff-d4bb-41a6-af75-d3a556cbf6ad,2a5ed45f-55b5-4410-9f10-08913c38ae24,D300,3397,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e40d5b70-037b-4786-8337-874b4c02182f,2a5ed45f-55b5-4410-9f10-08913c38ae24,D300,3397,,,,,,EventError,,,Support,,D300_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+fd576573-7ce9-42fa-9ea7-eef0fd4cfc63,b8581453-469f-4790-9f2f-499b3b9816d9,D400,3398,DIR,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d402adc7-5ede-4331-9609-fe9075094e97,b8581453-469f-4790-9f2f-499b3b9816d9,D400,3398,DIR,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+dccd580e-b992-456c-8247-53814b63f20d,b8581453-469f-4790-9f2f-499b3b9816d9,D400,3398,DIR,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f583a561-0ea0-4cdd-9a0c-18e857e4c66c,b8581453-469f-4790-9f2f-499b3b9816d9,D400,3398,DIR,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b9d19bf2-d00a-4257-94cd-7fbe41224a70,b8581453-469f-4790-9f2f-499b3b9816d9,D400,3398,DIR,,,,,EventError,,,Support,,D400_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+21d1598a-66c6-4185-a231-90cd3ff4644f,11a9aa9f-2a6a-4d57-9211-dcbdc3c96594,D500,3399,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d95318bd-a618-4e4d-9a72-2d83a4e7a978,11a9aa9f-2a6a-4d57-9211-dcbdc3c96594,D500,3399,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a5da8d30-baf3-4c17-82ae-e5bd0f185499,11a9aa9f-2a6a-4d57-9211-dcbdc3c96594,D500,3399,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+6bdedf71-67b2-46a7-9e0d-050bdcfba42f,11a9aa9f-2a6a-4d57-9211-dcbdc3c96594,D500,3399,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bf3e9e5e-4c85-4ff2-8603-d2139cb66d09,11a9aa9f-2a6a-4d57-9211-dcbdc3c96594,D500,3399,,,,,,EventError,,,Support,,D500_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+3ba4933b-65ed-4193-b766-da5f62a9d45a,76f5dde0-2887-45a7-9547-a7c91c0a8eec,D600,3400,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+58c07e30-2aa4-4d6c-b66a-754cf48d4d5d,76f5dde0-2887-45a7-9547-a7c91c0a8eec,D600,3400,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b79cf163-63ae-4b5a-8a39-6bca5a11f811,76f5dde0-2887-45a7-9547-a7c91c0a8eec,D600,3400,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+9fb84cf4-62cc-44be-bd07-4bf7e5a29271,76f5dde0-2887-45a7-9547-a7c91c0a8eec,D600,3400,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c1d12617-bccb-45f3-950f-0a66582bd6ee,76f5dde0-2887-45a7-9547-a7c91c0a8eec,D600,3400,,,,,,EventError,,,Support,,D600_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a1cd0e8f-a20e-495f-a5d1-c1cf7f54825c,a4ed73c2-be4c-4004-bc7a-21b5bd2e175c,DA00,3403,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+886dacef-7d54-4c86-8f0f-0e6aa9f968e0,a4ed73c2-be4c-4004-bc7a-21b5bd2e175c,DA00,3403,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+9edd1079-ce49-4752-8f51-de5e7b57ed20,a4ed73c2-be4c-4004-bc7a-21b5bd2e175c,DA00,3403,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+1d53d487-e255-40cd-b7a9-aa121d787e09,a4ed73c2-be4c-4004-bc7a-21b5bd2e175c,DA00,3403,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a98eda35-d9b4-4ee2-890e-b0d1ce5d3143,a4ed73c2-be4c-4004-bc7a-21b5bd2e175c,DA00,3403,,,,,,EventError,,,Support,,DA00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d5caf870-67ad-4d87-9665-1940c75937a6,c74ab95b-c9d6-4352-ba99-c9367d1a2db8,DB00,3404,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+808e58cb-e198-4b89-8c44-064f2a34eae0,c74ab95b-c9d6-4352-ba99-c9367d1a2db8,DB00,3404,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+76464ff7-8014-42b1-9444-e439ce86c8b3,c74ab95b-c9d6-4352-ba99-c9367d1a2db8,DB00,3404,,,,,,,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+356bde78-5b4a-435c-ad35-8802768168b2,c74ab95b-c9d6-4352-ba99-c9367d1a2db8,DB00,3404,,,,,,NoVendor,,,Procurement Verification,3,SRED_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+690fb15d-6322-4879-9ab4-0fa24bd8958e,c74ab95b-c9d6-4352-ba99-c9367d1a2db8,DB00,3404,,,,,,EventError,,,Support,,DB00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+10db774c-54f2-4f94-9a18-a51c01e426b6,2881270a-1326-45ce-831e-0223e19a55a7,DC00,3405,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+23a4cc62-0d47-4322-8591-7750e0a6c5e2,2881270a-1326-45ce-831e-0223e19a55a7,DC00,3405,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c9a7df84-2a9e-43fe-b8e0-8784212d9b59,2881270a-1326-45ce-831e-0223e19a55a7,DC00,3405,,,,,,,,,Procurement Verification,3,DC00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ef217e64-98c6-47a2-983d-e477b94406c8,2881270a-1326-45ce-831e-0223e19a55a7,DC00,3405,,,,,,NoVendor,,,Procurement Verification,3,DC00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c1403128-0c45-4926-83f6-f320145a70b4,2881270a-1326-45ce-831e-0223e19a55a7,DC00,3405,,,,,,EventError,,,Support,,DC00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f703281e-82e8-4394-adeb-136368499dd5,3bc36863-0738-433a-be4a-696d3ff38408,DD00,7431,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+df21bb69-7e10-4201-9adf-d6fe9822573e,3bc36863-0738-433a-be4a-696d3ff38408,DD00,7431,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bcb3f70f-7767-4c8b-a748-a2b15c7e0cc9,3bc36863-0738-433a-be4a-696d3ff38408,DD00,7431,,,,,,,,,Procurement Verification,3,DD00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a3508506-2866-4c17-be54-7a8161be29a2,3bc36863-0738-433a-be4a-696d3ff38408,DD00,7431,,,,,,NoVendor,,,Procurement Verification,3,DD00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8170f9ca-9798-4a59-8b53-9dfb379eacde,3bc36863-0738-433a-be4a-696d3ff38408,DD00,7431,,,,,,EventError,,,Support,,DD00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+fc316837-463b-45cf-abf5-92fd8110caf5,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+28b4ef9b-b0f8-4fba-acc9-99b46b0119a3,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bba0d74f-0e3d-45e2-abd4-f227793efa06,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8f6d7eb0-727a-45e2-b02c-0b8d1617d792,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+0616467f-319e-4857-b3de-169f81a5ac32,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,,,EventError,,,Support,,DI00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+658e8a12-8a4c-4272-a58a-fd972e584b64,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+0665bd03-507e-4dd0-932c-b52c8174389f,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7c2eac42-b314-42a7-b190-4810f86dc58a,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f09e70bb-8a6c-4715-bb5e-b13c125d95f4,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ddc1851f-f015-4718-a89a-9a4720e2d26a,c264c46a-5d1a-4044-93af-a986378507af,DI00,3416,,,,,,EventError,,,Support,,DI00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+68673b61-5132-4470-b148-01236fbb7cad,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,IND,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+94ff9099-787d-4e27-ac31-31a14b7f812e,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,IND,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8da506d5-f7fe-45ff-ac7a-7fc7fe86eb8a,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,IND,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+fa30ec50-cb3c-4cc3-afec-b745b77dc25c,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,IND,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bc89efbd-09b5-40af-b636-ecf77f2912eb,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,IND,,,,,EventError,,,Support,,DL00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+0159daff-8745-4d83-98bb-707038a20b48,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+20a2bfb3-6a79-4c2a-a8ef-00f0900403cf,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d89b2ebe-85ce-474d-b46e-1c90de967ccf,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+3d06b71c-35cc-4933-b6d4-a574a005ee8e,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e1a74a2e-0d0e-4d62-9857-2a73c296a688,c2ab3f43-622c-4587-a2e4-537988eb78d8,DL00,3414,,,,,,EventError,,,Support,,DL00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+73ec2b04-0046-464c-9c06-f2790d3773d4,2e7c8a29-8289-41fc-9d3b-a57e437ec8ba,DO00,3361,IND,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c009d3f3-c329-4566-863f-b8efd0fe86aa,2e7c8a29-8289-41fc-9d3b-a57e437ec8ba,DO00,3361,IND,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+208e4108-c0c4-4795-825b-da00f376f281,2e7c8a29-8289-41fc-9d3b-a57e437ec8ba,DO00,3361,IND,,,,,,,,Procurement Verification,3,DO00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+57c31412-3135-44fd-8eed-2ca85368bd4a,2e7c8a29-8289-41fc-9d3b-a57e437ec8ba,DO00,3361,IND,,,,,NoVendor,,,Procurement Verification,3,DO00_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5a1da965-7d7d-44e5-a88e-bfab681b7cca,2e7c8a29-8289-41fc-9d3b-a57e437ec8ba,DO00,3361,IND,,,,,EventError,,,Support,,DO00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+561d0452-5872-4d1d-a7a0-0669bc97166e,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+9fb01940-e317-40ba-937d-d114276e6a78,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+28b35280-5202-473d-a9a6-68f844a34386,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+99de291d-e26a-429c-b7bb-d96528d093e4,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d3e71960-6c4b-495a-9586-5177c7d2df3e,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,,,EventError,,,Support,,DP00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+820d2b10-716d-4cde-bb9d-e56b028640f7,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b313ae50-b868-47bd-ab68-118016e25c81,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c8eaa322-1dd2-4973-b765-2ba3c15ca842,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7b94940d-6801-4b7f-8a75-ce64dd8aafc7,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+47f524d4-5c48-4aa1-8901-6fc3b823a953,87312f4a-5108-4c19-9426-018d693d8e67,DP00,300A,,,,,,EventError,,,Support,,DP00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+2154a776-4c6a-445d-a55b-c6daefdb30d1,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f6fe8f56-693f-4210-8c5a-4d401be48287,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,Freetext,,,15000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+17be139b-fbb7-47e8-9765-e93b9e238ac2,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,,,,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a1da08e7-ec91-44f1-a0f9-c55902624d56,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,,,NoVendor,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+bc7748e2-20a6-4090-a091-1b064c99650d,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,,,EventError,,,Support,,DQ00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+f821f8eb-1592-4433-9c21-7ec4a40a14ab,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+be287d2b-6571-4ff7-8e40-1ec9b1caccb2,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,Freetext,,,50000,999999999,Procurement Expert,2,SCM,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+5cb98c20-2350-45d6-a907-88c519ba522a,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,,,,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+4224627d-44ad-44d5-9237-f17f0430470c,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,,,NoVendor,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+02e18d2f-ba51-40ca-97ec-79da67decac1,0b93bde5-8cb3-422d-877f-5226b3bb19ff,DQ00,300B,,,,,,EventError,,,Support,,DQ00_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c75bcf61-ebb0-4037-bcfd-392327aada9b,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d529ad16-dacb-40a6-a631-4e21b87fa3a1,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,,,,Freetext,,,15000,999999999,Procurement Expert,2,SW36_Notification_ProcMgmt1,250000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+4ea6ace0-5623-461e-8e54-24897c741411,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,,,,,,,,,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+fbfe806e-dac1-4f2f-ab62-98223a41b5a3,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,,,,,,,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+7b15d7c0-8c98-4494-acf3-ebf5b71588c8,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,,,,,,NoVendor,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+57db06d5-5bcc-4e01-a82c-210bad2af2ea,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,,,,,,EventError,,,Support,,SW36_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+15b5e36f-61ff-4ca1-be60-b8f1e64415b7,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,DIR,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+147fac0a-3500-441d-950e-a5d831138fd0,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,DIR,,,Freetext,,,50000,999999999,Procurement Expert,2,SW36_Notification_ProcMgmt1,250000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+79fad74e-cf98-4438-a675-72369d0bace2,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,DIR,,,,,,,,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e3d2d2d6-1e38-4ec4-b435-f2fee6f55d85,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,DIR,,,,,,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ea2a76c8-0847-4670-9d3b-9c89773c02b8,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,DIR,,,,,NoVendor,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d6ebc1bb-f218-4f23-bf28-904ef2da6274,e99d2611-2960-43d4-bf8a-9b48b946f829,SW36,3010,DIR,,,,,EventError,,,Support,,SW36_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+080e3599-21a6-4e32-8477-4012e754cca7,6108c52d-89cc-466d-afea-65e4ebf8f146,SW37,3009,IND,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+4534c977-0272-4fbc-a406-4d974449d40c,6108c52d-89cc-466d-afea-65e4ebf8f146,SW37,3009,IND,,,Freetext,,,15000,999999999,Procurement Expert,2,SW37_Notification_ProcMgmt1,250000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c68e0a0d-3a40-47d0-abfa-7a754256b8de,6108c52d-89cc-466d-afea-65e4ebf8f146,SW37,3009,IND,,,,,,,,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c2417ae7-c5fd-4274-9336-5f01af645d27,6108c52d-89cc-466d-afea-65e4ebf8f146,SW37,3009,IND,,,,,,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d696418c-56a5-4905-8465-933b60fec70e,6108c52d-89cc-466d-afea-65e4ebf8f146,SW37,3009,IND,,,,,NoVendor,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8c601b99-59e2-4cd9-8cfb-c11a8f531eb3,6108c52d-89cc-466d-afea-65e4ebf8f146,SW37,3009,IND,,,,,EventError,,,Support,,SW37_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+8d74d59b-bb0b-46c0-8f2b-04558be8fe48,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+ee1c95fc-5bd2-478a-add5-7e6252d3e7d0,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,,,,Freetext,,,15000,999999999,Procurement Expert,2,SW38_Notification_ProcMgmt1,250000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e0267bd7-522f-4ab4-b6af-b324adf75c61,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,,,,,,,,,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+493351e6-c381-4ae9-94cc-ba856c2907c8,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+9896057a-027c-417f-8b25-2fdd294e59fd,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+4853fcb2-9ec6-485e-a0f5-d3942060e8bd,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,,,,,,EventError,,,Support,,SW38_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+d2d802c2-5d38-406a-b3d7-657cf7478fe8,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,DIR,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+46a0c6d4-c368-49f7-8a8a-509cd2828e24,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,DIR,,,Freetext,,,50000,999999999,Procurement Expert,2,SW38_Notification_ProcMgmt1,250000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c151d817-11ff-4a72-a542-3d302ba7544b,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,DIR,,,,,,,,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+a024bcf3-b90a-4263-8f17-3a5280e40a97,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,DIR,,,,,,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c00b1a89-3135-4ebf-9050-d9fffc5166fd,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,DIR,,,,,NoVendor,,,Procurement Verification,3,SWIN_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+c9bbe46b-558e-48b7-8c69-d3492588659e,16c2d70f-0829-4f98-9c9f-a5e54cc94d43,SW38,3008,DIR,,,,,EventError,,,Support,,SW38_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b7344b75-6be1-4618-875c-4e8e4ea3bc99,304ca8a9-41cd-47f2-9a2e-afa5c85a16ce,SW39,3011,IND,,,,,,,,Requester,1,REQ,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+e1eec3ee-ed95-47bd-ae7e-27187d2bb819,304ca8a9-41cd-47f2-9a2e-afa5c85a16ce,SW39,3011,IND,,,Freetext,,,15000,999999999,Procurement Expert,2,SW39_Notification_ProcMgmt1,250000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+b4832cd5-c920-49a2-87dc-f7b80ce0578a,304ca8a9-41cd-47f2-9a2e-afa5c85a16ce,SW39,3011,IND,,,,,,,,Procurement Expert,2,SWXX_Notification_ProcMgmt2,500000,EUR,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+11b439c7-0c0a-4332-8f0c-849687950e62,304ca8a9-41cd-47f2-9a2e-afa5c85a16ce,SW39,3011,IND,,,,,,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+75b2a243-a55f-46a0-853d-af642f91fd2a,304ca8a9-41cd-47f2-9a2e-afa5c85a16ce,SW39,3011,IND,,,,,NoVendor,,,Procurement Verification,3,SWCZ_Purchaser,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+651c80d3-1d6c-4fed-8230-0ebd73248470,304ca8a9-41cd-47f2-9a2e-afa5c85a16ce,SW39,3011,IND,,,,,EventError,,,Support,,SW39_Support,,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
