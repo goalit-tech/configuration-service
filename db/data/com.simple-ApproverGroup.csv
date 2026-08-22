@@ -1,0 +1,10 @@
+GroupName,Description,IsActive,createdAt,createdBy,modifiedAt,modifiedBy
+C300_Support,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+C501_Purchaser,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+C501_Support,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+REQ,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+SCM,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+SRED_Purchaser,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+SRER_Purchaser,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+SUCZ_Support,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
+XXXX_Support,,true,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin

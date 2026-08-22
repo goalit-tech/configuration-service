@@ -1,3 +1,0 @@
-ID,purchasingOrg,type,IsActive,createdAt,createdBy,modifiedAt,modifiedBy
-10000000-0000-0000-0000-000000000001,,TechnicalConstant,true,2026-08-01T10:00:00Z,admin,2026-08-01T10:00:00Z,admin
-10000000-0000-0000-0000-000000000002,C501,OrgSpecificConstant,true,2026-08-02T09:00:00Z,admin,2026-08-02T09:00:00Z,admin

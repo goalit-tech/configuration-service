@@ -77,9 +77,11 @@ entity ApprovalStep : cuid, managed {
     NotificationCurrency      : String;
     /** Indicates whether the rule is active. */
     IsActive                  : Boolean;
-
-    Approvers                 : Composition of many ApproverGroupMember
-                                    on Approvers.ApprovalStep = $self;
+    ApproverGroup             : Association to many StepApproverGroups
+                                    on ApproverGroup.ApprovalStep = $self;
+    // ApproverGroup             : Association to ApproverGroup;
+    StepApprovers             : Composition of many StepApprover
+                                    on StepApprovers.ApprovalStep = $self;
 }
 
 type SATApproverAmount {
@@ -87,9 +89,35 @@ type SATApproverAmount {
     highAmount : Decimal(15, 2);
 }
 
-entity ApproverGroupMember : cuid, managed {
-    /** Approver group mapping this member belongs to. */
-    ApprovalStep : Association to ApprovalStep;
-    /** Global ID of the approver. */
-    GID          : String;
+entity Approver : managed {
+    key GID      : String;
+        email    : String;
+        IsActive : Boolean;
 }
+
+/** Master data: a named, reusable group of approvers. */
+entity ApproverGroup : managed {
+    key GroupName   : String;
+        Description : String;
+        IsActive    : Boolean;
+        Members     : Composition of many ApproverGroupMember
+                          on Members.ApproverGroup = $self;
+}
+
+/** Thin link: which Approver belongs to which ApproverGroup. */
+entity ApproverGroupMember : cuid, managed {
+    ApproverGroup : Association to ApproverGroup;
+    Approver      : Association to Approver;
+}
+
+/** Thin link: which Approver is assigned directly to a step (no group). */
+entity StepApprover : cuid, managed {
+    ApprovalStep : Association to ApprovalStep;
+    Approver     : Association to Approver;
+}
+
+entity StepApproverGroups : cuid, managed {
+    ApprovalStep  : Association to ApprovalStep;
+    ApproverGroup : Association to ApproverGroup;
+}
+
