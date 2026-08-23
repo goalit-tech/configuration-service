@@ -109,6 +109,7 @@
           "pattern": "ConfigurationScope({key})/ApprovalStep({key2}):?query:",
           "name": "ApprovalStepObjectPage",
           "target": [
+            "ConfigurationScopeList",
             "ConfigurationScopeObjectPage",
             "ApprovalStepObjectPage"
           ]
@@ -218,7 +219,7 @@
               "contextPath": "/ApprovalStep"
             }
           },
-          "controlAggregation": "midColumnPages",
+          "controlAggregation": "endColumnPages",
           "contextPattern": "/ConfigurationScope({key})/ApprovalStep({key2})"
         }
       }

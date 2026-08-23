@@ -11,12 +11,15 @@ service ConfigService {
 
     entity ApproverGroupMember           as projection on db.ApproverGroupMember;
 
+    entity StepApproverGroups            as projection on db.StepApproverGroups;
+
+    entity StepApprover                  as projection on db.StepApprover;
+
     @odata.draft.enabled
     entity ApproverGroup                 as projection on db.ApproverGroup;
 
     @odata.draft.enabled
     entity Approver                      as projection on db.Approver;
-
 
     entity IdentifierDownloadView        as
         select from Identifier {

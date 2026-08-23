@@ -1,7 +1,7 @@
 using ConfigService as service from '../../srv/configService';
 
 annotate service.ApproverGroup with @(
-    UI.SelectionFields                        : [GroupName, ],
+    UI.SelectionFields                        : [GroupName],
     UI.FieldGroup #GeneratedGroup             : {
         $Type: 'UI.FieldGroupType',
         Data : [
@@ -33,7 +33,7 @@ annotate service.ApproverGroup with @(
             $Type : 'UI.ReferenceFacet',
             ID    : 'AssignedApprovers',
             Label : 'Assigned Approvers',
-            Target: 'Members/@UI.LineItem#tableView',
+            Target: 'Members/@UI.LineItem',
         },
     ],
     UI.LineItem                               : [
@@ -66,12 +66,27 @@ annotate service.ApproverGroup with @(
 
             ],
         },
-        Text               : 'Table View',
+        Text               : 'Approver Groups',
     },
 );
 
+annotate service.ApproverGroupMember with @(
+    UI.LineItem: [
+        {
+            $Type: 'UI.DataField',
+            Label: 'Approver GID',
+            Value: Approver_GID,
+        },
+        {
+            $Type: 'UI.DataField',
+            Label: 'Email',
+            Value: Approver.email,
+        },
+    ],
+);
+
 annotate service.Approver with @(
-    UI.SelectionFields                        : [GID, ],
+    UI.SelectionFields                        : [GID],
     UI.LineItem #tableView                    : [
         {
             $Type: 'UI.DataField',
@@ -95,6 +110,72 @@ annotate service.Approver with @(
             $Type        : 'UI.SelectionVariantType',
             SelectOptions: [],
         },
-        Text               : 'Table View Approver',
+        Text               : 'Approver',
     },
 );
+
+// annotate service.ApproverGroupView with @(
+//     UI.SelectionFields                        : [GroupName],
+//     UI.LineItem                               : [
+//         {
+//             $Type: 'UI.DataField',
+//             Label: 'GroupName',
+//             Value: GroupName,
+//         },
+//         {
+//             $Type: 'UI.DataField',
+//             Label: 'Description',
+//             Value: Description,
+//         },
+//         {
+//             $Type: 'UI.DataField',
+//             Label: 'IsActive',
+//             Value: IsActive,
+//         },
+//     ],
+//     UI.SelectionPresentationVariant #tableView: {
+//         $Type              : 'UI.SelectionPresentationVariantType',
+//         PresentationVariant: {
+//             $Type         : 'UI.PresentationVariantType',
+//             Visualizations: ['@UI.LineItem'],
+//         },
+//         SelectionVariant   : {
+//             $Type        : 'UI.SelectionVariantType',
+//             SelectOptions: [],
+//         },
+//         Text               : 'Approver Groups',
+//     },
+// );
+
+// annotate service.ApproverView with @(
+//     UI.SelectionFields                        : [GID],
+//     UI.LineItem                               : [
+//         {
+//             $Type: 'UI.DataField',
+//             Label: 'GID',
+//             Value: GID,
+//         },
+//         {
+//             $Type: 'UI.DataField',
+//             Label: 'Email',
+//             Value: email,
+//         },
+//         {
+//             $Type: 'UI.DataField',
+//             Label: 'IsActive',
+//             Value: IsActive,
+//         },
+//     ],
+//     UI.SelectionPresentationVariant #tableView: {
+//         $Type              : 'UI.SelectionPresentationVariantType',
+//         PresentationVariant: {
+//             $Type         : 'UI.PresentationVariantType',
+//             Visualizations: ['@UI.LineItem'],
+//         },
+//         SelectionVariant   : {
+//             $Type        : 'UI.SelectionVariantType',
+//             SelectOptions: [],
+//         },
+//         Text               : 'Approvers',
+//     },
+// );

@@ -172,22 +172,62 @@ annotate service.ApprovalStep with @(
         },
         {
             $Type : 'UI.ReferenceFacet',
+            Label : 'Approver Group',
+            ID    : 'ApproverGroupIdforConfigurationScope',
+            Target: 'ApproverGroup/@UI.LineItem#ApproverGroups',
+        },
+        {
+            $Type : 'UI.ReferenceFacet',
             Label : 'Approvers',
-            ID    : 'ApproverMembers',
-            Target: 'Approvers/@UI.LineItem#ApproverMembers',
+            ID    : 'ApproverMembersforConfigurationScope',
+            Target: 'StepApprovers/@UI.LineItem#ApproverMembers',
         },
     ]
 );
 
-annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMembers: [
+annotate service.StepApproverGroups with @(UI.LineItem #ApproverGroups: [
     {
         $Type: 'UI.DataField',
-        Label: 'GID',
-        Value: GID,
+        Label: 'Group Name',
+        Value: ApproverGroup_GroupName,
     },
     {
         $Type: 'UI.DataField',
-        Label: 'IsActive',
+        Label: 'Description',
+        Value: ApproverGroup.Description,
+    },
+    {
+        $Type: 'UI.DataField',
+        Label: 'Is Active',
+        Value: ApproverGroup.IsActive,
+    },
+], );
+annotate service.StepApprover with @(UI.LineItem #ApproverMembers: [
+    {
+        $Type: 'UI.DataField',
+        Label: 'Approver GID',
+        Value: Approver_GID,
+    },
+    {
+        $Type: 'UI.DataField',
+        Label: 'Email',
+        Value: Approver.email,
+    },
+], );
+annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMembers: [
+    {
+        $Type: 'UI.DataField',
+        Label: 'Approver GID',
+        Value: Approver_GID,
+    },
+    {
+        $Type: 'UI.DataField',
+        Label: 'Group Name',
+        Value: ApproverGroup_GroupName,
+    },
+    {
+        $Type: 'UI.DataField',
+        Label: 'Is Active',
         Value: IsActive,
     },
 ], );
