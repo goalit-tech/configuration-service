@@ -33,6 +33,11 @@ service ConfigService {
                 IsActive
         };
 
+    @readonly
+    entity ProjectView as select from ConfigurationScope {
+        key ID,
+            Project
+    } group by Project;
 
     @readonly
     entity ApprovalStepDownloadView      as

@@ -18,6 +18,8 @@ entity ConfigurationScope : cuid, managed {
     Plant         : String;
     /** Type of the configuration. */
     IsActive      : Boolean;
+
+    Project       : String;
     /** Configuration items belonging to this header. */
     Identifiers   : Composition of many Identifier
                         on Identifiers.ConfigurationScope = $self;
@@ -120,4 +122,3 @@ entity StepApproverGroups : cuid, managed {
     ApprovalStep  : Association to ApprovalStep;
     ApproverGroup : Association to ApproverGroup;
 }
-

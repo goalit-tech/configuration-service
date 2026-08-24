@@ -87,6 +87,7 @@ annotate service.ConfigurationScope with @(
         PurchasingOrg,
         Plant,
         IsActive,
+        Project
     ],
 );
 
