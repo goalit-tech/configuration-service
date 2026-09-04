@@ -1,5 +1,0 @@
-ID,CompanyCode,PurchasingOrg,Plant,IsActive,Project,createdAt,createdBy,modifiedAt,modifiedBy
-2d35f3ce-da61-4d84-a4b5-752b76353d53,,,,true,IND,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
-683c7737-ded2-454b-aa81-17f65a6308d4,3003,C300,,true,IND,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
-70cdd54c-e696-4eda-859e-86c60fa4d47b,3014,C501,,true,IND,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
-2d35f3ce-da61-4d84-a4b5-752345553d53,,,,true,DIR,2026-08-20T00:00:00Z,admin,2026-08-20T00:00:00Z,admin
