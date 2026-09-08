@@ -50,6 +50,6 @@ entity ApproverGroupMember : cuid, managed {
     Email                         : String;
     IsNotificationEnabled         : Boolean default false;
     IsActive                      : Boolean default true;
-    virtual IsApproverLocked      : Boolean;
+    // virtual IsApproverLocked      : Boolean;
     virtual IsApproverLockedState : Integer default 3;
 }

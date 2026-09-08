@@ -175,7 +175,6 @@ annotate service.ApproverGroupMember with @(Common.SideEffects #ApproverChanged:
         Email,
         IsActive,
         IsNotificationEnabled,
-        IsApproverLocked,
         IsApproverLockedState,
         Approver.Email,
         Approver.IsNotificationEnabled,
@@ -184,7 +183,7 @@ annotate service.ApproverGroupMember with @(Common.SideEffects #ApproverChanged:
 });
 
 annotate service.ApproverGroupMember with {
-    IsApproverLocked      @UI.Hidden          : true;
+    // IsApproverLocked      @UI.Hidden          : true;
     IsApproverLockedState @UI.Hidden          : true;
     Email                 @Common.FieldControl: IsApproverLockedState;
     IsNotificationEnabled @Common.FieldControl: IsApproverLockedState;
@@ -233,7 +232,7 @@ annotate service.ApproverGroupMember with {
     });
 };
 
-annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMemberLineItem : [
+annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMemberLineItem: [
     {
         $Type: 'UI.DataField',
         Label: 'Approver GID',
@@ -246,16 +245,16 @@ annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMemberLineItem 
         ![@Common.FieldControl]: IsApproverLockedState
     },
     {
-        $Type                : 'UI.DataField',
-        Label                : 'Notification Enabled',
-        Value                : IsNotificationEnabled,
-        @Common.FieldControl : (IsApproverLocked ? #ReadOnly : #Optional)
+        $Type                  : 'UI.DataField',
+        Label                  : 'Notification Enabled',
+        Value                  : IsNotificationEnabled,
+        ![@Common.FieldControl]: IsApproverLockedState
     },
     {
-        $Type                : 'UI.DataField',
-        Label                : 'IsActive',
-        Value                : IsActive,
-        @Common.FieldControl : (IsApproverLocked ? #ReadOnly : #Optional)
+        $Type                  : 'UI.DataField',
+        Label                  : 'IsActive',
+        Value                  : IsActive,
+        ![@Common.FieldControl]: IsApproverLockedState
     },
 ]);
 
@@ -265,7 +264,7 @@ annotate service.ApproverGroupMember with @Common: {SideEffects #ApproverGIDIsSe
         'Email',
         'IsNotificationEnabled',
         'IsActive',
-        'IsApproverLocked',
+        // 'IsApproverLocked',
         'IsApproverLockedState'
     ],
 }, }
