@@ -53,22 +53,22 @@ class ApproverAndGroups extends cds.ApplicationService {
         }
 
         this.before('PATCH', this.ApproverGroupMemberDrafts, async (req) => {
-            await this.rejectLockedMemberEdits(req);
-            await this.syncApproverDetails(req);
-            await this.validateUniqueMemberInGroup(req);
-            await this.syncMemberLockState(req);
+          // await this.rejectLockedMemberEdits(req);
+            // await this.syncApproverDetails(req);
+            // await this.validateUniqueMemberInGroup(req);
+            // await this.syncMemberLockState(req);
         });
     }
     _registerForBeforeRead() {
-        this.before('READ', this.ApproverGroupMember, async (req) => {
-            this.ensureMemberLockStateColumns(req);
-        });
+        // this.before('READ', this.ApproverGroupMember, async (req) => {
+        //     this.ensureMemberLockStateColumns(req);
+        // });
 
-        if (this.ApproverGroupMemberDrafts) {
-            this.before('READ', this.ApproverGroupMemberDrafts, async (req) => {
-                this.ensureMemberLockStateColumns(req);
-            });
-        }
+        // if (this.ApproverGroupMemberDrafts) {
+        //     this.before('READ', this.ApproverGroupMemberDrafts, async (req) => {
+        //         this.ensureMemberLockStateColumns(req);
+        //     });
+        // }
     }
     _registerForAfterRead() {
         this.after('READ', this.ApproverGroupMember, async (data) => {
@@ -172,34 +172,35 @@ class ApproverAndGroups extends cds.ApplicationService {
                 return;
             }
 
-            row.IsApproverLocked = !!row.Approver_ID;
-            row.IsApproverLockedState = row.Approver_ID ? this.FIELD_CONTROL.ReadOnly : this.FIELD_CONTROL.Optional;
+            const isLocked = !!(row.Approver_ID || row.Approver?.GID);
+            row.IsApproverLocked = isLocked;
+            row.IsApproverLockedState = isLocked ? this.FIELD_CONTROL.ReadOnly : this.FIELD_CONTROL.Optional;
         };
 
         Array.isArray(data) ? data.forEach(applyLockState) : applyLockState(data);
     };
-    ensureMemberLockStateColumns(req) {
-        const columns = req.query?.SELECT?.columns;
+    // ensureMemberLockStateColumns(req) {
+    //     const columns = req.query?.SELECT?.columns;
 
-        if (!Array.isArray(columns)) {
-            return;
-        }
+    //     if (!Array.isArray(columns)) {
+    //         return;
+    //     }
 
-        const hasColumn = (name) =>
-            columns.some((col) => col === '*' || (col?.ref?.length === 1 && col.ref[0] === name));
+    //     const hasColumn = (name) =>
+    //         columns.some((col) => col === '*' || (col?.ref?.length === 1 && col.ref[0] === name));
 
-        if (!hasColumn('Approver_ID')) {
-            columns.push({ ref: ['Approver_ID'] });
-        }
+    //     if (!hasColumn('Approver_ID')) {
+    //         columns.push({ ref: ['Approver_ID'] });
+    //     }
 
-        if (!hasColumn('IsApproverLocked')) {
-            columns.push({ ref: ['IsApproverLocked'] });
-        }
+    //     if (!hasColumn('IsApproverLocked')) {
+    //         columns.push({ ref: ['IsApproverLocked'] });
+    //     }
 
-        if (!hasColumn('IsApproverLockedState')) {
-            columns.push({ ref: ['IsApproverLockedState'] });
-        }
-    };
+    //     if (!hasColumn('IsApproverLockedState')) {
+    //         columns.push({ ref: ['IsApproverLockedState'] });
+    //     }
+    // };
     async getPersistedMember(req) {
         if (!req.data?.ID) {
             return null;

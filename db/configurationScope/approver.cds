@@ -45,11 +45,11 @@ type FieldControlState : String enum {
 }
 
 entity ApproverGroupMember : cuid, managed {
-    ApproverGroup            : Association to ApproverGroup;
-    Approver                 : Association to Approver;
-    Email                    : String;
-    IsNotificationEnabled    : Boolean default false;
-    IsActive                 : Boolean default true;
-    virtual IsApproverLocked  : Boolean;
+    ApproverGroup                 : Association to ApproverGroup;
+    Approver                      : Association to Approver;
+    Email                         : String;
+    IsNotificationEnabled         : Boolean default false;
+    IsActive                      : Boolean default true;
+    virtual IsApproverLocked      : Boolean;
     virtual IsApproverLockedState : Integer default 3;
 }

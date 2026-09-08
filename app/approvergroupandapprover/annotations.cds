@@ -175,6 +175,8 @@ annotate service.ApproverGroupMember with @(Common.SideEffects #ApproverChanged:
         Email,
         IsActive,
         IsNotificationEnabled,
+        IsApproverLocked,
+        IsApproverLockedState,
         Approver.Email,
         Approver.IsNotificationEnabled,
         Approver.IsActive,
@@ -241,7 +243,7 @@ annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMemberLineItem 
         $Type                  : 'UI.DataField',
         Label                  : 'Approver Email',
         Value                  : Email,
-        ![@Common.FieldControl]: #ReadOnly
+        ![@Common.FieldControl]: IsApproverLockedState
     },
     {
         $Type                : 'UI.DataField',
@@ -257,12 +259,13 @@ annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMemberLineItem 
     },
 ]);
 
-annotate service.Approver with @Common: {SideEffects #ApproverGIDIsSelected: {
-    SourceProperties: ['GID'],
+annotate service.ApproverGroupMember with @Common: {SideEffects #ApproverGIDIsSelected: {
+    SourceProperties: ['Approver_ID'],
     TargetProperties: [
         'Email',
         'IsNotificationEnabled',
-        'IsActive'
+        'IsActive',
+        'IsApproverLocked',
+        'IsApproverLockedState'
     ],
-    TargetEntities  : [ApproverGroupMember],
 }, }
