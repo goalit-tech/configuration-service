@@ -4,11 +4,11 @@ class ApproverAndGroups extends cds.ApplicationService {
   async init() {
     this.FIELD_CONTROL = { ReadOnly: 1, Optional: 3, Mandatory: 7 };
     const { Approver, ApproverGroup, ApproverGroupMember } = this.entities;
-    this.Approver = this.entities.Approver;
-    this.ApproverGroup = this.entities.ApproverGroup;
-    this.ApproverGroupMember = this.entities.ApproverGroupMember;
-    this.ApproverGroupMemberDrafts = this.entities.ApproverGroupMember?.drafts;
-    this.LOCKED_MEMBER_FIELDS = ["Email", "IsNotificationEnabled", "IsActive"];
+    // this.Approver = this.entities.Approver;
+    // this.ApproverGroup = this.entities.ApproverGroup;
+    // this.ApproverGroupMember = this.entities.ApproverGroupMember;
+    // this.ApproverGroupMemberDrafts = this.entities.ApproverGroupMember?.drafts;
+    // this.LOCKED_MEMBER_FIELDS = ["Email", "IsNotificationEnabled", "IsActive"];
     this.after("READ", ApproverGroupMember, async (data) => {
       await this.syncMemberLockState(data);
     });
