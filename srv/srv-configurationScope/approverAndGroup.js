@@ -30,8 +30,7 @@ class ApproverAndGroups extends cds.ApplicationService {
       }
 
       const isLocked = !!(row.Approver_ID || row.Approver?.GID);
-      // row.IsApproverLocked = isLocked;
-      row.IsApproverLockedState = isLocked
+      row.IsApproverGidSelectedState = isLocked
         ? this.FIELD_CONTROL.ReadOnly
         : this.FIELD_CONTROL.Optional;
     };

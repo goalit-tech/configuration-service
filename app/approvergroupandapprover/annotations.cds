@@ -175,7 +175,7 @@ annotate service.ApproverGroupMember with @(Common.SideEffects #ApproverChanged:
         Email,
         IsActive,
         IsNotificationEnabled,
-        IsApproverLockedState,
+        IsApproverGidSelectedState,
         Approver.Email,
         Approver.IsNotificationEnabled,
         Approver.IsActive,
@@ -184,10 +184,10 @@ annotate service.ApproverGroupMember with @(Common.SideEffects #ApproverChanged:
 
 annotate service.ApproverGroupMember with {
     // IsApproverLocked      @UI.Hidden          : true;
-    IsApproverLockedState @UI.Hidden          : true;
-    Email                 @Common.FieldControl: IsApproverLockedState;
-    IsNotificationEnabled @Common.FieldControl: IsApproverLockedState;
-    IsActive              @Common.FieldControl: IsApproverLockedState;
+    IsApproverGidSelectedState @UI.Hidden          : true;
+    Email                 @Common.FieldControl: IsApproverGidSelectedState;
+    IsNotificationEnabled @Common.FieldControl: IsApproverGidSelectedState;
+    IsActive              @Common.FieldControl: IsApproverGidSelectedState;
 }
 
 annotate service.Approver with {
@@ -242,19 +242,19 @@ annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMemberLineItem:
         $Type                  : 'UI.DataField',
         Label                  : 'Approver Email',
         Value                  : Email,
-        ![@Common.FieldControl]: IsApproverLockedState
+        ![@Common.FieldControl]: IsApproverGidSelectedState
     },
     {
         $Type                  : 'UI.DataField',
         Label                  : 'Notification Enabled',
         Value                  : IsNotificationEnabled,
-        ![@Common.FieldControl]: IsApproverLockedState
+        ![@Common.FieldControl]: IsApproverGidSelectedState
     },
     {
         $Type                  : 'UI.DataField',
         Label                  : 'IsActive',
         Value                  : IsActive,
-        ![@Common.FieldControl]: IsApproverLockedState
+        ![@Common.FieldControl]: IsApproverGidSelectedState
     },
 ]);
 
@@ -265,6 +265,6 @@ annotate service.ApproverGroupMember with @Common: {SideEffects #ApproverGIDIsSe
         'IsNotificationEnabled',
         'IsActive',
         // 'IsApproverLocked',
-        'IsApproverLockedState'
+        'IsApproverGidSelectedState'
     ],
 }, }

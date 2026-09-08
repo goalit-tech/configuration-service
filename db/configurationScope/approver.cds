@@ -51,5 +51,5 @@ entity ApproverGroupMember : cuid, managed {
     IsNotificationEnabled         : Boolean default false;
     IsActive                      : Boolean default true;
     // virtual IsApproverLocked      : Boolean;
-    virtual IsApproverLockedState : Integer default 3;
+    virtual IsApproverGidSelectedState : Integer default 3;
 }
