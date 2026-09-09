@@ -314,4 +314,10 @@ annotate service.ApproverGroupMember with @Common: {SideEffects #ApproverGIDIsSe
         'IsActive',
         'IsApproverGidSelectedState'
     ],
-}, }
+}, };
+
+annotate service.ApproverGroupOverview with {
+    Approver_ID      @UI.Hidden: true;
+    ApproverGroup_ID @UI.Hidden: true;
+    ID               @UI.Hidden: true;
+}
