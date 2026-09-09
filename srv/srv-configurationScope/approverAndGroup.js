@@ -38,6 +38,7 @@ class ApproverAndGroups extends cds.ApplicationService {
     });
     this.after("SAVE", Approver, async (data, req) => {
       await this.syncApproverGroupMemberActiveState(req?.data);
+      await this.syncApproverGroupMemberNotificationState(req?.data);
     });
 
     return super.init();
@@ -165,6 +166,21 @@ class ApproverAndGroups extends cds.ApplicationService {
         .where({ Approver_ID: row.ID });
       await UPDATE(ApproverGroupMember.drafts)
         .set({ IsActive: row.IsActive })
+        .where({ Approver_ID: row.ID });
+    }
+  }
+  async syncApproverGroupMemberNotificationState(data) {
+    const rows = [data].flat().filter(Boolean);
+    const { ApproverGroupMember } = this.entities;
+
+    for (const row of rows) {
+      if (row.ID == null || row.IsNotificationEnabled == null) continue;
+
+      await UPDATE(ApproverGroupMember)
+        .set({ IsNotificationEnabled: row.IsNotificationEnabled })
+        .where({ Approver_ID: row.ID });
+      await UPDATE(ApproverGroupMember.drafts)
+        .set({ IsNotificationEnabled: row.IsNotificationEnabled })
         .where({ Approver_ID: row.ID });
     }
   }

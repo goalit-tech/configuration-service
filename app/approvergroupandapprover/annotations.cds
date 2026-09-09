@@ -76,29 +76,29 @@ annotate service.ApproverGroup with @(
 );
 
 annotate service.ApproverGroup with {
+    ID        @UI.Hidden: true;
     GroupName @(
-        Common.Label         : 'Group Name',
-        Text                 : ID,
-        TextArrangement      : #TextOnly,
-        mandatory            : true,
-        assert.format        : '^[a-zA-Z0-9_]+$',
-        assert.format.message: 'Group Name must be alphanumeric, underscores are allowed',
-        ValueList            : {
+        Common.Label                   : 'Group Name',
+        mandatory                      : true,
+        assert.format                  : '^[a-zA-Z0-9_]+$',
+        assert.format.message          : 'Group Name must be alphanumeric, underscores are allowed',
+        Common.ValueList               : {
             $Type         : 'Common.ValueListType',
             CollectionPath: 'ApproverGroup',
             Parameters    : [
                 {
                     $Type            : 'Common.ValueListParameterInOut',
                     LocalDataProperty: GroupName,
-                    ValueListProperty: 'ID',
+                    ValueListProperty: 'GroupName',
                 },
                 {
                     $Type            : 'Common.ValueListParameterDisplayOnly',
-                    ValueListProperty: 'GroupName',
-                },
-            ]
-        }
-
+                    ValueListProperty: 'Description',
+                }
+            ],
+            Label         : 'Group Name',
+        },
+        Common.ValueListWithFixedValues: false,
     );
     IsActive  @(
         Common.Label: 'Is Active',
@@ -215,12 +215,30 @@ annotate service.ApproverGroupMember with {
 }
 
 annotate service.Approver with {
+    ID    @UI.Hidden: true;
     GID   @(
         Common.Label                   : 'Approver GID',
-        Common.Text                    : (GID),
-        Common.Text.@UI.TextArrangement: #TextOnly,
-        assert.format                  : '^Z[a-zA-Z0-9]+$',
+        // Common.Text                    : (GID),
+        // Common.Text.@UI.TextArrangement: #TextOnly,
+        assert.format                  : '^[Zz][a-zA-Z0-9]+$',
         assert.format.message          : 'GID must start with Z and contain only alphanumeric characters',
+        Common.ValueList               : {
+            $Type         : 'Common.ValueListType',
+            CollectionPath: 'Approver',
+            Parameters    : [
+                {
+                    $Type            : 'Common.ValueListParameterInOut',
+                    LocalDataProperty: GID,
+                    ValueListProperty: 'GID',
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'Email',
+                },
+            ],
+            Label         : 'Approver',
+        },
+        Common.ValueListWithFixedValues: false,
     );
     Email @(
         assert.format        : '^[\w.+-]+@[\w-]+\.[a-zA-Z]{2,}$',
@@ -294,7 +312,6 @@ annotate service.ApproverGroupMember with @Common: {SideEffects #ApproverGIDIsSe
         'Email',
         'IsNotificationEnabled',
         'IsActive',
-        // 'IsApproverLocked',
         'IsApproverGidSelectedState'
     ],
 }, }
