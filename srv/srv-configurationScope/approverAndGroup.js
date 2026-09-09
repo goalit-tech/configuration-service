@@ -12,9 +12,9 @@ class ApproverAndGroups extends cds.ApplicationService {
       await this.updateApproverGIDSelectionState(data);
       // await this.updateApproverGroupMemberField(data);
     });
-    // this.before("PATCH", ApproverGroupMember?.drafts, async (req) => {
-    //   await this.updateApproverGroupMemberField(req);
-    // });
+    this.before("PATCH", ApproverGroupMember?.drafts, async (req) => {
+      await this.resetApproverGroupMemberFields(req);
+    });
     this.before("NEW", Approver.drafts, async (req) => {
       this.setDraftDefaults(req);
     });
@@ -34,6 +34,17 @@ class ApproverAndGroups extends cds.ApplicationService {
   }
   setDraftDefaults(req) {
     req.data.IsActive ??= true;
+  }
+  async resetApproverGroupMemberFields(req) {
+    // clear dependent fields when the selected approver is removed from the row
+    const approverCleared =
+      ("Approver_ID" in req.data && !req.data.Approver_ID) ||
+      ("Approver" in req.data && !req.data.Approver);
+    if (approverCleared) {
+      req.data.Email = null;
+      req.data.IsNotificationEnabled = false;
+      req.data.IsActive = true;
+    }
   }
   // async updateApproverGroupMemberField(req) {
   //   console.log(req)
