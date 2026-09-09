@@ -4,13 +4,17 @@ class ApproverAndGroups extends cds.ApplicationService {
   async init() {
     this.FIELD_CONTROL = { ReadOnly: 1, Optional: 3, Mandatory: 7 };
     const { Approver, ApproverGroup, ApproverGroupMember } = this.entities;
-    
+
     this.after("READ", ApproverGroupMember, async (data) => {
-      await this.syncMemberLockState(data);
+      await this.updateApproverGIDSelectionState(data);
     });
     this.after("READ", ApproverGroupMember?.drafts, async (data) => {
-      await this.syncMemberLockState(data);
+      await this.updateApproverGIDSelectionState(data);
+      // await this.updateApproverGroupMemberField(data);
     });
+    // this.before("PATCH", ApproverGroupMember?.drafts, async (req) => {
+    //   await this.updateApproverGroupMemberField(req);
+    // });
     this.before("NEW", Approver.drafts, async (req) => {
       this.setDraftDefaults(req);
     });
@@ -19,26 +23,20 @@ class ApproverAndGroups extends cds.ApplicationService {
     });
     return super.init();
   }
-  async syncMemberLockState(data) {
-    if (!data) {
-      return;
-    }
-
-    const applyLockState = (row) => {
-      if (!row) {
-        return;
-      }
-
-      const isLocked = !!(row.Approver_ID || row.Approver?.GID);
-      row.IsApproverGidSelectedState = isLocked
-        ? this.FIELD_CONTROL.ReadOnly
-        : this.FIELD_CONTROL.Optional;
-    };
-
-    Array.isArray(data) ? data.forEach(applyLockState) : applyLockState(data);
+  async updateApproverGIDSelectionState(data) {
+    const rows = [data].flat().filter(Boolean);
+    rows.forEach((row) => {
+      row.IsApproverGidSelectedState =
+        row.Approver_ID || row.Approver?.GID
+          ? this.FIELD_CONTROL.ReadOnly
+          : this.FIELD_CONTROL.Optional;
+    });
   }
   setDraftDefaults(req) {
     req.data.IsActive ??= true;
   }
+  // async updateApproverGroupMemberField(req) {
+  //   console.log(req)
+  // }
 }
 export default ApproverAndGroups;
