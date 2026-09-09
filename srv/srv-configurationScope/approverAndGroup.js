@@ -1,5 +1,7 @@
 import cds from "@sap/cds";
 
+const { SELECT } = cds.ql;
+
 class ApproverAndGroups extends cds.ApplicationService {
   async init() {
     this.FIELD_CONTROL = { ReadOnly: 1, Optional: 3, Mandatory: 7 };
@@ -14,6 +16,10 @@ class ApproverAndGroups extends cds.ApplicationService {
     });
     this.before("PATCH", ApproverGroupMember?.drafts, async (req) => {
       await this.resetApproverGroupMemberFields(req);
+      await this.validateUniqueEmailInGroup(req);
+    });
+    this.before("CREATE", ApproverGroupMember?.drafts, async (req) => {
+      await this.validateUniqueEmailInGroup(req);
     });
     this.before("NEW", Approver.drafts, async (req) => {
       this.setDraftDefaults(req);
@@ -21,8 +27,13 @@ class ApproverAndGroups extends cds.ApplicationService {
     this.before("NEW", ApproverGroup.drafts, async (req) => {
       this.setDraftDefaults(req);
     });
+    this.before(["CREATE", "PATCH"], Approver.drafts, async (req) => {
+      await this.validateUniqueApproverFields(req);
+    });
+
     return super.init();
   }
+
   async updateApproverGIDSelectionState(data) {
     const rows = [data].flat().filter(Boolean);
     rows.forEach((row) => {
@@ -49,5 +60,87 @@ class ApproverAndGroups extends cds.ApplicationService {
   // async updateApproverGroupMemberField(req) {
   //   console.log(req)
   // }
+  async validateUniqueApproverFields(req) {
+    const gid = req.data.GID?.trim();
+    const email = req.data.Email?.trim();
+    if (!gid && !email) return;
+
+    const { Approver } = this.entities;
+    const rowID = req.data.ID ?? req.params?.at(-1)?.ID;
+
+    const siblings = [
+      ...(await SELECT.from(Approver.drafts)),
+      ...(await SELECT.from(Approver)),
+    ];
+
+    if (gid) {
+      const isDuplicateGID = siblings.some(
+        (row) =>
+          row.ID !== rowID &&
+          row.GID?.trim().toLowerCase() === gid.toLowerCase(),
+      );
+      if (isDuplicateGID) {
+        req.error(
+          400,
+          `GID "${gid}" is already added, please add another GID.`,
+          "in/GID",
+        );
+      }
+    }
+    if (email) {
+      const isDuplicateEmail = siblings.some(
+        (row) =>
+          row.ID !== rowID &&
+          row.Email?.trim().toLowerCase() === email.toLowerCase(),
+      );
+      if (isDuplicateEmail) {
+        req.error(
+          400,
+          `Email "${email}" is already added, please add another Email.`,
+          "in/Email",
+        );
+      }
+    }
+  }
+  async validateUniqueEmailInGroup(req) {
+    const email = req.data.Email?.trim();
+    if (!email) return;
+
+    const { ApproverGroupMember } = this.entities;
+    const rowID = req.data.ID ?? req.params?.at(-1)?.ID;
+
+    let approverGroupID = req.data.ApproverGroup_ID;
+    if (!approverGroupID && rowID) {
+      const existing =
+        (await SELECT.one
+          .from(ApproverGroupMember.drafts)
+          .where({ ID: rowID })) ??
+        (await SELECT.one.from(ApproverGroupMember).where({ ID: rowID }));
+      approverGroupID = existing?.ApproverGroup_ID;
+    }
+    if (!approverGroupID) return;
+
+    const siblings = [
+      ...(await SELECT.from(ApproverGroupMember.drafts).where({
+        ApproverGroup_ID: approverGroupID,
+      })),
+      ...(await SELECT.from(ApproverGroupMember).where({
+        ApproverGroup_ID: approverGroupID,
+      })),
+    ];
+    const isDuplicate = siblings.some(
+      (row) =>
+        row.ID !== rowID &&
+        row.Email?.trim().toLowerCase() === email.toLowerCase(),
+    );
+
+    if (isDuplicate) {
+      req.error(
+        400,
+        `Email "${email}" is already used by another member in this group.`,
+        "in/Email",
+      );
+    }
+  }
 }
 export default ApproverAndGroups;
