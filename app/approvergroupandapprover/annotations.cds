@@ -75,10 +75,30 @@ annotate service.ApproverGroup with @(
     }
 );
 
-annotate service.ApproverGroup with @() {
+annotate service.ApproverGroup with {
     GroupName @(
-        Common.Label: 'Group Name',
-        mandatory   : true
+        Common.Label         : 'Group Name',
+        Text                 : ID,
+        TextArrangement      : #TextOnly,
+        mandatory            : true,
+        assert.format        : '^[a-zA-Z0-9_]+$',
+        assert.format.message: 'Group Name must be alphanumeric, underscores are allowed',
+        ValueList            : {
+            $Type         : 'Common.ValueListType',
+            CollectionPath: 'ApproverGroup',
+            Parameters    : [
+                {
+                    $Type            : 'Common.ValueListParameterInOut',
+                    LocalDataProperty: GroupName,
+                    ValueListProperty: 'ID',
+                },
+                {
+                    $Type            : 'Common.ValueListParameterDisplayOnly',
+                    ValueListProperty: 'GroupName',
+                },
+            ]
+        }
+
     );
     IsActive  @(
         Common.Label: 'Is Active',
@@ -185,13 +205,13 @@ annotate service.ApproverGroupMember with @(Common.SideEffects #ApproverChanged:
 annotate service.ApproverGroupMember with {
     // IsApproverLocked      @UI.Hidden          : true;
     IsApproverGidSelectedState @UI.Hidden          : true;
-    Email                 @(
+    Email                      @(
         Common.FieldControl  : IsApproverGidSelectedState,
         assert.format        : '^[\w.+-]+@[\w-]+\.[a-zA-Z]{2,}$',
         assert.format.message: 'Enter a valid email'
     );
-    IsNotificationEnabled @Common.FieldControl: IsApproverGidSelectedState;
-    IsActive              @Common.FieldControl: IsApproverGidSelectedState;
+    IsNotificationEnabled      @Common.FieldControl: IsApproverGidSelectedState;
+    IsActive                   @Common.FieldControl: IsApproverGidSelectedState;
 }
 
 annotate service.Approver with {

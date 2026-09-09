@@ -1,6 +1,6 @@
 import cds from "@sap/cds";
 
-const { SELECT } = cds.ql;
+const { SELECT, UPDATE } = cds.ql;
 
 class ApproverAndGroups extends cds.ApplicationService {
   async init() {
@@ -30,8 +30,14 @@ class ApproverAndGroups extends cds.ApplicationService {
     this.before(["CREATE", "PATCH"], Approver.drafts, async (req) => {
       await this.validateUniqueApproverFields(req);
     });
+    this.before(["CREATE", "PATCH"], ApproverGroup.drafts, async (req) => {
+      await this.validateUniqueApproverGroupFields(req);
+    });
     this.before("DELETE", Approver, async (req) => {
       await this.validateApproverNotInUse(req);
+    });
+    this.after("SAVE", Approver, async (data, req) => {
+      await this.syncApproverGroupMemberActiveState(req?.data);
     });
 
     return super.init();
@@ -60,9 +66,30 @@ class ApproverAndGroups extends cds.ApplicationService {
       req.data.IsActive = true;
     }
   }
-  // async updateApproverGroupMemberField(req) {
-  //   console.log(req)
-  // }
+  async validateUniqueApproverGroupFields(req) {
+    const groupName = req.data.GroupName?.trim();
+    if (!groupName) return;
+    const { ApproverGroup } = this.entities;
+    const rowID = req.data.ID ?? req.params?.at(-1)?.ID;
+    const siblings = [
+      ...(await SELECT.from(ApproverGroup.drafts)),
+      ...(await SELECT.from(ApproverGroup)),
+    ];
+    if (groupName) {
+      const isDuplicategroupName = siblings.some(
+        (row) =>
+          row.ID !== rowID &&
+          row.GroupName?.trim().toLowerCase() === groupName.toLowerCase(),
+      );
+      if (isDuplicategroupName) {
+        req.error(
+          400,
+          `groupName "${groupName}" is already added, please add another group name.`,
+          "in/GroupName",
+        );
+      }
+    }
+  }
   async validateUniqueApproverFields(req) {
     const gid = req.data.GID?.trim();
     const email = req.data.Email?.trim();
@@ -124,6 +151,21 @@ class ApproverAndGroups extends cds.ApplicationService {
         400,
         `This approver is already used by an Approver Group Member and cannot be deleted.`,
       );
+    }
+  }
+  async syncApproverGroupMemberActiveState(data) {
+    const rows = [data].flat().filter(Boolean);
+    const { ApproverGroupMember } = this.entities;
+
+    for (const row of rows) {
+      if (row.ID == null || row.IsActive == null) continue;
+
+      await UPDATE(ApproverGroupMember)
+        .set({ IsActive: row.IsActive })
+        .where({ Approver_ID: row.ID });
+      await UPDATE(ApproverGroupMember.drafts)
+        .set({ IsActive: row.IsActive })
+        .where({ Approver_ID: row.ID });
     }
   }
   async validateUniqueEmailInGroup(req) {
