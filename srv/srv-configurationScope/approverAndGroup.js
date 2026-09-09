@@ -30,6 +30,9 @@ class ApproverAndGroups extends cds.ApplicationService {
     this.before(["CREATE", "PATCH"], Approver.drafts, async (req) => {
       await this.validateUniqueApproverFields(req);
     });
+    this.before("DELETE", Approver, async (req) => {
+      await this.validateApproverNotInUse(req);
+    });
 
     return super.init();
   }
@@ -100,6 +103,27 @@ class ApproverAndGroups extends cds.ApplicationService {
           "in/Email",
         );
       }
+    }
+  }
+  async validateApproverNotInUse(req) {
+    const approverID = req.data.ID ?? req.params?.at(-1)?.ID;
+    if (!approverID) return;
+
+    const { ApproverGroupMember } = this.entities;
+
+    const isUsed =
+      (await SELECT.one
+        .from(ApproverGroupMember)
+        .where({ Approver_ID: approverID })) ??
+      (await SELECT.one
+        .from(ApproverGroupMember.drafts)
+        .where({ Approver_ID: approverID }));
+
+    if (isUsed) {
+      req.error(
+        400,
+        `This approver is already used by an Approver Group Member and cannot be deleted.`,
+      );
     }
   }
   async validateUniqueEmailInGroup(req) {
