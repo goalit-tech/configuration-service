@@ -185,16 +185,26 @@ annotate service.ApproverGroupMember with @(Common.SideEffects #ApproverChanged:
 annotate service.ApproverGroupMember with {
     // IsApproverLocked      @UI.Hidden          : true;
     IsApproverGidSelectedState @UI.Hidden          : true;
-    Email                 @Common.FieldControl: IsApproverGidSelectedState;
+    Email                 @(
+        Common.FieldControl  : IsApproverGidSelectedState,
+        assert.format        : '^[\w.+-]+@[\w-]+\.[a-zA-Z]{2,}$',
+        assert.format.message: 'Enter a valid email'
+    );
     IsNotificationEnabled @Common.FieldControl: IsApproverGidSelectedState;
     IsActive              @Common.FieldControl: IsApproverGidSelectedState;
 }
 
 annotate service.Approver with {
-    GID @(
+    GID   @(
         Common.Label                   : 'Approver GID',
         Common.Text                    : (GID),
         Common.Text.@UI.TextArrangement: #TextOnly,
+        assert.format                  : '^Z[a-zA-Z0-9]+$',
+        assert.format.message          : 'GID must start with Z and contain only alphanumeric characters',
+    );
+    Email @(
+        assert.format        : '^[\w.+-]+@[\w-]+\.[a-zA-Z]{2,}$',
+        assert.format.message: 'Enter a valid email'
     );
 };
 
