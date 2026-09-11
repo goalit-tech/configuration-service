@@ -1,0 +1,233 @@
+{
+  "_version": "1.86.0",
+  "sap.app": {
+    "id": "com.siemens.ind.approvergroupandapprover",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.31.1",
+      "toolsId": "15779fca-b0d6-4946-adb2-a7a1fda62d20"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/odata/v4/approver-and-group/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "odataVersion": "4.0"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "approvergroupandapprover-manage": {
+          "semanticObject": "approvergroupandapprover",
+          "action": "manage",
+          "title": "{{approvergroupandapprover-manage.flpTitle}}",
+          "subTitle": "{{approvergroupandapprover-manage.flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.151.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.siemens.ind.approvergroupandapprover.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "ApproverGroupList",
+          "target": "ApproverGroupList"
+        },
+        {
+          "pattern": "ApproverGroup({key}):?query:",
+          "name": "ApproverGroupObjectPage",
+          "target": "ApproverGroupObjectPage"
+        },
+        {
+          "pattern": "Approver({key}):?query:",
+          "name": "ApproverObjectPage",
+          "target": "ApproverObjectPage"
+        }
+      ],
+      "targets": {
+        "ApproverGroupList": {
+          "type": "Component",
+          "id": "ApproverGroupList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/ApproverGroup",
+              "variantManagement": "Page",
+              "navigation": {
+                "ApproverGroup": {
+                  "detail": {
+                    "route": "ApproverGroupObjectPage"
+                  }
+                },
+                "Approver": {
+                  "detail": {
+                    "route": "ApproverObjectPage"
+                  }
+                }
+              },
+              "controlConfiguration": {
+                "/ApproverGroup/@com.sap.vocabularies.UI.v1.LineItem#ApproverGroupLineItem": {
+                  "actions": {
+                    "ApproverGroup": {
+                      "press": "com.siemens.ind.approvergroupandapprover.ext.ListReportExtController.onDownloadApproverGroup",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "Approver Group"
+                    },
+                    "Export": {
+                      "text": "Export",
+                      "menu": [
+                        "ApproverGroup"
+                      ]
+                    }
+                  },
+                  "tableSettings": {
+                    "enableExport": false,
+                    "selectionMode": "Single",
+                    "type": "ResponsiveTable",
+                    "quickVariantSelection": {
+                      "showCounts": true
+                    }
+                  }
+                },
+                "/Approver/@com.sap.vocabularies.UI.v1.LineItem#ApproverLineItem": {
+                  "actions": {
+                    "ApproverImport": {
+                      "press": "com.siemens.ind.approvergroupandapprover.ext.ListReportExtController.onDownloadApprover",
+                      "visible": true,
+                      "enabled": true,
+                      "requiresSelection": false,
+                      "text": "Import"
+                    }
+                  },
+                  "tableSettings": {
+                    "selectAll": false,
+                    "selectionMode": "Single",
+                    "type": "ResponsiveTable"
+                  }
+                }
+              },
+              "views": {
+                "paths": [
+                  {
+                    "key": "ApproverGroupTableView",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#TableViewApproverGroup",
+                    "entitySet": "ApproverGroup",
+                    "keepPreviousPersonalization": true
+                  },
+                  {
+                    "key": "ApproverTableView",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#TableViewApprover",
+                    "entitySet": "Approver",
+                    "keepPreviousPersonalization": true
+                  }
+                ],
+                "showCounts": true
+              }
+            }
+          }
+        },
+        "ApproverGroupObjectPage": {
+          "type": "Component",
+          "id": "ApproverGroupObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/ApproverGroup"
+            }
+          }
+        },
+        "ApproverObjectPage": {
+          "type": "Component",
+          "id": "ApproverObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/Approver"
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  },
+  "sap.fe": {
+    "app": {
+      "enableLazyLoading": true
+    }
+  }
+}

@@ -1,16 +1,16 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Sun Aug 23 2026 16:26:58 GMT+0530 (India Standard Time)|
+|**Generation Date and Time**<br>Sat Aug 29 2026 08:54:16 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.24.0|
-|**Generation Platform**<br>Visual Studio Code|
+|**App Generator Version**<br>1.31.1|
+|**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>List Report Page V4|
 |**Service Type**<br>Local CAP|
 |**Service URL**<br>http://localhost:4004/odata/v4/config/|
-|**Module Name**<br>approvergroups|
-|**Application Title**<br>Approver Groups and Approver|
-|**Namespace**<br>com.demo|
+|**Module Name**<br>approvergroupandapprover|
+|**Application Title**<br>Approver Group and Approver|
+|**Namespace**<br>com.siemens.ind|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.151.0|
 |**Enable TypeScript**<br>False|
@@ -18,15 +18,15 @@
 |**Main Entity**<br>ApproverGroup|
 |**Navigation Entity**<br>None|
 
-## approvergroups
+## approvergroupandapprover
 
-Approver Groups and Approver
+Approver Group and Approver
 
 ### Starting the generated app
 
 -   This app has been generated using the SAP Fiori tools - App Generator, as part of the SAP Fiori tools suite.  To launch the generated app, start your CAP project:  and navigate to the following location in your browser:
 
-http://localhost:4004/com.demo.approvergroups/index.html
+http://localhost:4004/com.siemens.ind.approvergroupandapprover/index.html
 
 #### Pre-requisites:
 

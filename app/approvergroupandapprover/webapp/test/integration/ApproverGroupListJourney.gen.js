@@ -22,31 +22,40 @@ sap.ui.define([
     "use strict";
 
     function journey() {
-        QUnit.module("ConstantConfigListListReport journey");
+        QUnit.module("ApproverGroupListListReport journey");
+
+        const defaultTableId = "";
 
         opaTest("Start application", function (Given, When, Then) {
             Given.iStartMyApp();
 
-            Then.onTheConstantConfigList.iSeeThisPage();
+            Then.onTheApproverGroupListGenerated.iSeeThisPage();
         });
 
+        opaTest("Check filter bar", function (Given, When, Then) {
+            Then.onTheApproverGroupListGenerated.onFilterBar().iCheckFilterField({ property: "GroupName" });
+        });
 
+        // Note: this test will only work if the ListReport page has a search field and shows data that matches the search term. Please ensure that the test data and search term are set up accordingly.
+        // opaTest("Perform a global search and check the result", function (Given, When, Then) {
+        //     When.onTheApproverGroupListGenerated.onFilterBar().iChangeSearchField("Search Term");
+        //     When.onTheApproverGroupListGenerated.onFilterBar().iExecuteSearch();
+        //     Then.onTheApproverGroupListGenerated.onTable(defaultTableId).iCheckRows();
+        // });
 
-
+        opaTest("Check table columns and actions", function (Given, When, Then) {
+            Then.onTheApproverGroupListGenerated.onTable(defaultTableId).iCheckColumns(undefined, {"GroupName":{"header":"GroupName"},"Description":{"header":"Description"},"IsActive":{"header":"IsActive"}});
+        });
 
         opaTest("Navigate to ObjectPage", function (Given, When, Then) {
             // Note: this test will fail if the ListReport page doesn't show any data
-            
-            When.onTheConstantConfigList.onFilterBar().iExecuteSearch();
-            
-            Then.onTheConstantConfigList.onTable().iCheckRows();
-
-            When.onTheConstantConfigList.onTable().iPressRow(0);
-            Then.onTheConstantConfigObjectPage.iSeeThisPage();
-
+            When.onTheApproverGroupListGenerated.onFilterBar().iExecuteSearch();
+            Then.onTheApproverGroupListGenerated.onTable(defaultTableId).iCheckRows();
+            When.onTheApproverGroupListGenerated.onTable(defaultTableId).iPressRow(0);
+            Then.onTheApproverGroupObjectPageGenerated.iSeeThisPage();
         });
 
-        opaTest("Teardown", function (Given, When, Then) { 
+        opaTest("Teardown", function (Given, When, Then) {
             // Cleanup
             Given.iTearDownMyApp();
         });

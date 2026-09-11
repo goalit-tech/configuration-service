@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@sap/cds": "^10",
+    "@sap/xssec": "^4.15.0",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
@@ -14,7 +15,7 @@
     "start": "cds-serve",
     "watch": "cds watch",
     "watch-project1": "cds watch --open project1/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-approvergroups": "cds watch --open com.demo.approvergroups/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-approvergroupandapprover": "cds watch --open com.siemens.ind.approvergroupandapprover/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
@@ -22,6 +23,20 @@
   ],
   "sapux": [
     "app/project1",
-    "app/approvergroups"
-  ]
+    "app/approvergroupandapprover"
+  ],
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "model": [
+          "db",
+          "srv"
+        ],
+        "credentials": {
+          "url": "configscope.db"
+        }
+      }
+    }
+  }
 }

@@ -3,7 +3,7 @@ sap.ui.define(
     function (Component) {
         "use strict";
 
-        return Component.extend("com.demo.approvergroups.Component", {
+        return Component.extend("com.siemens.ind.approvergroupandapprover.Component", {
             metadata: {
                 manifest: "json"
             }

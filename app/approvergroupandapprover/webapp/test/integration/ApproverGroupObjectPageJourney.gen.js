@@ -22,29 +22,29 @@ sap.ui.define([
     "use strict";
 
     function journey() {
-        QUnit.module("ApproverGroupListListReport journey");
+        QUnit.module("ApproverGroupObjectPageObjectPage journey");
 
-        opaTest("Start application", function (Given, When, Then) {
+        opaTest("Navigate to ApproverGroupObjectPageObjectPage", function (Given, When, Then) {
             Given.iStartMyApp();
+            When.onTheApproverGroupListGenerated.onFilterBar().iExecuteSearch();
+            Then.onTheApproverGroupListGenerated.onTable().iCheckRows();
+            When.onTheApproverGroupListGenerated.onTable().iPressRow(0);
 
-            Then.onTheApproverGroupList.iSeeThisPage();
+            Then.onTheApproverGroupObjectPageGenerated.iSeeThisPage();
         });
 
 
 
-
-
-        opaTest("Navigate to ObjectPage", function (Given, When, Then) {
-            // Note: this test will fail if the ListReport page doesn't show any data
-            
-            When.onTheApproverGroupList.onFilterBar().iExecuteSearch();
-            
-            Then.onTheApproverGroupList.onTable().iCheckRows();
-
-            When.onTheApproverGroupList.onTable().iPressRow(0);
-            Then.onTheApproverGroupObjectPage.iSeeThisPage();
-
-        });
+        opaTest("Check body sections of the Object Page", function (Given, When, Then) {
+            Then.onTheApproverGroupObjectPageGenerated.iCheckNumberOfSections(2);
+            When.onTheApproverGroupObjectPageGenerated.iPressSectionIconTabFilterButton("GeneratedFacet1");
+            Then.onTheApproverGroupObjectPageGenerated.iCheckSection({ section: "GeneratedFacet1" });
+            Then.onTheApproverGroupObjectPageGenerated.onForm({ section: "GeneratedFacet1" }).iCheckField({ property: "GroupName" });
+            Then.onTheApproverGroupObjectPageGenerated.onForm({ section: "GeneratedFacet1" }).iCheckField({ property: "Description" });
+            Then.onTheApproverGroupObjectPageGenerated.onForm({ section: "GeneratedFacet1" }).iCheckField({ property: "IsActive" });
+            When.onTheApproverGroupObjectPageGenerated.iPressSectionIconTabFilterButton("AssignedApprovers");
+            Then.onTheApproverGroupObjectPageGenerated.iCheckSection({ section: "AssignedApprovers" });
+       });
 
         opaTest("Teardown", function (Given, When, Then) { 
             // Cleanup
