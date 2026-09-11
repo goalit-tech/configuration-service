@@ -35,6 +35,11 @@ annotate service.ConfigurationScope with @(
             },
             {
                 $Type: 'UI.DataField',
+                Label: 'Project',
+                Value: Project,
+            },
+            {
+                $Type: 'UI.DataField',
                 Label: 'IsActive',
                 Value: IsActive,
             }
@@ -75,6 +80,11 @@ annotate service.ConfigurationScope with @(
             $Type: 'UI.DataField',
             Label: 'Plant',
             Value: Plant,
+        },
+        {
+            $Type: 'UI.DataField',
+            Label: 'Project',
+            Value: Project,
         },
         {
             $Type: 'UI.DataField',
@@ -203,6 +213,7 @@ annotate service.StepApproverGroups with @(UI.LineItem #ApproverGroups: [
         Value: ApproverGroup.IsActive,
     },
 ], );
+
 annotate service.StepApprover with @(UI.LineItem #ApproverMembers: [
     {
         $Type: 'UI.DataField',
@@ -215,6 +226,7 @@ annotate service.StepApprover with @(UI.LineItem #ApproverMembers: [
         Value: Approver.email,
     },
 ], );
+
 annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMembers: [
     {
         $Type: 'UI.DataField',
