@@ -11,7 +11,6 @@ annotate service.ApproverGroup with @(
     },
     UI.SelectionFields                        : [
         GroupName,
-        Members.Approver.GID
     ],
     UI.FieldGroup #ApproverGroupGeneral       : {
         $Type: 'UI.FieldGroupType',
@@ -64,7 +63,7 @@ annotate service.ApproverGroup with @(
             Value: IsActive,
         },
     ],
-    UI.SelectionPresentationVariant #TableView: {
+    UI.SelectionPresentationVariant #TableViewApproverGroup: {
         $Type              : 'UI.SelectionPresentationVariantType',
         PresentationVariant: {
             $Type         : 'UI.PresentationVariantType',
@@ -175,7 +174,7 @@ annotate service.Approver with @(
             Value: IsActive,
         },
     ],
-    UI.SelectionPresentationVariant #TableView: {
+    UI.SelectionPresentationVariant #TableViewApprover: {
         $Type              : 'UI.SelectionPresentationVariantType',
         PresentationVariant: {
             $Type         : 'UI.PresentationVariantType',
@@ -277,7 +276,8 @@ annotate service.ApproverGroupMember with {
             Label         : 'Approver',
         },
         ValueListWithFixedValues: false,
-    });
+    },
+        Common.Label : 'Members/Approver_ID',);
 };
 
 annotate service.ApproverGroupMember with @(UI.LineItem #ApproverMemberLineItem: [

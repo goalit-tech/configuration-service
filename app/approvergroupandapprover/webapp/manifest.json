@@ -94,7 +94,7 @@
     "resources": {
       "css": []
     },
-     "routing": {
+    "routing": {
       "config": {},
       "routes": [
         {
@@ -135,13 +135,43 @@
                 }
               },
               "controlConfiguration": {
-                "@com.sap.vocabularies.UI.v1.LineItem": {
+                "/ApproverGroup/@com.sap.vocabularies.UI.v1.LineItem#ApproverGroupLineItem": {
+                  "actions": {
+                    "ApproverGroup": {
+                      "press": "com.siemens.ind.approvergroupandapprover.ext.ListReportExtController.onDownloadApproverGroup",
+                      "visible": true,
+                      "enabled": true,
+                      "text": "Approver Group"
+                    },
+                    "Export": {
+                      "text": "Export",
+                      "menu": [
+                        "ApproverGroup"
+                      ]
+                    }
+                  },
                   "tableSettings": {
-                    "type": "ResponsiveTable"
+                    "enableExport": false,
+                    "selectionMode": "Single",
+                    "type": "ResponsiveTable",
+                    "quickVariantSelection": {
+                      "showCounts": true
+                    }
                   }
                 },
-                "Approver/@com.sap.vocabularies.UI.v1.LineItem#ApproverLineItem": {
+                "/Approver/@com.sap.vocabularies.UI.v1.LineItem#ApproverLineItem": {
+                  "actions": {
+                    "ApproverImport": {
+                      "press": "com.siemens.ind.approvergroupandapprover.ext.ListReportExtController.onDownloadApprover",
+                      "visible": true,
+                      "enabled": true,
+                      "requiresSelection": false,
+                      "text": "Import"
+                    }
+                  },
                   "tableSettings": {
+                    "selectAll": false,
+                    "selectionMode": "Single",
                     "type": "ResponsiveTable"
                   }
                 }
@@ -150,14 +180,18 @@
                 "paths": [
                   {
                     "key": "ApproverGroupTableView",
-                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#TableView"
+                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#TableViewApproverGroup",
+                    "entitySet": "ApproverGroup",
+                    "keepPreviousPersonalization": true
                   },
                   {
                     "key": "ApproverTableView",
-                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#TableView",
-                    "entitySet": "Approver"
+                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#TableViewApprover",
+                    "entitySet": "Approver",
+                    "keepPreviousPersonalization": true
                   }
-                ]
+                ],
+                "showCounts": true
               }
             }
           }
